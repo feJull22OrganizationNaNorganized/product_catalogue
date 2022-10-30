@@ -2,15 +2,24 @@
 
 import express from 'express';
 import path from 'path';
+// import phonesFromServer from '../data/api/phones.json'
+import { readFile } from 'fs/promises';
 
 const app = express();
-const port = 3000;
+const port = 8080;
 
 app.use(express.static(path.resolve('public')));
+app.use(express.json());
 
-app.get('/', (req, res) => {
+const phones = JSON.parse(
+  await readFile(
+    new URL('../data/api/phones.json', import.meta.url)
+  )
+);
+
+app.get('/phones', (req, res) => {
   console.log('Server is running');
-  res.end('<h1>Team Hello</h1>')
-})
+  res.send(phones);
+});
 
 app.listen(port);
