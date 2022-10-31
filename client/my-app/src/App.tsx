@@ -1,11 +1,9 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
+export const App = () => {
   return (
     <p>hello YURII</p>
   );
-}
+};
 
-export default App;
