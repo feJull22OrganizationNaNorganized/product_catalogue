@@ -4,6 +4,11 @@ import express from 'express';
 import path from 'path';
 // import phonesFromServer from '../data/api/phones.json'
 import { readFile } from 'fs/promises';
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT || 8080;
@@ -25,7 +30,7 @@ app.get('/phones', (req, res) => {
 
 app.use('*',(req, res) => {
   res.status(404);
-  res.send('Page not found');
+  res.sendFile(path.join(__dirname, '/pageNotFound/pageNotFound.html'));
 });
 
 app.listen(PORT);
