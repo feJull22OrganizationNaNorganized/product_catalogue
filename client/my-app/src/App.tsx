@@ -1,10 +1,10 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { PhoneCard } from './Components/PhoneCard/PhoneCard';
 
 function App() {
   return (
-    <p>hello YURII</p>
+    <p>Hello </p>
   );
 }
 
