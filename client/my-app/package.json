@@ -1,5 +1,6 @@
 {
-  "name": "my-app",
+  "name": "product_catalogue",
+  "homepage": "https://feJull22OrganizationNaNorganized.github.io/product_catalogue/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,7 +11,11 @@
     "@types/node": "^16.18.2",
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
+ Product_card
     "node-sass": "^7.0.3",
+
+    "gh-pages": "^4.0.0",
+ main
     "prettier": "^2.7.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -19,6 +24,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
