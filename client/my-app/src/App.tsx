@@ -6,7 +6,7 @@ import React from 'react';
 import './App.css';
 import { Iphones } from './types/Iphones';
 import { getAllProducts } from './api/iphones';
-import { Loader } from './loader/loader';
+import { Badrequest } from './404/404';
 
 export const App: React.FC = () => {
   const [products, setProducts] = useState<Iphones[] | []>([]);
@@ -28,7 +28,7 @@ export const App: React.FC = () => {
   return (
     <div>
       {errorReq && (
-        <Loader />
+        <Badrequest />
       )}
     </div>
   );

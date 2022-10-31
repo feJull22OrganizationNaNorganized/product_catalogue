@@ -29,8 +29,7 @@ app.get('/phones', (req, res) => {
 });
 
 app.use('*',(req, res) => {
-  res.status(404);
-  res.sendFile(path.join(__dirname, '/pageNotFound/pageNotFound.html'));
+  res.sendStatus(404);
 });
 
 app.listen(PORT);
