@@ -6,7 +6,7 @@ import path from 'path';
 import { readFile } from 'fs/promises';
 
 const app = express();
-const port = 8080;
+const PORT = process.env.PORT || 8080;
 
 app.use(express.static(path.resolve('public')));
 app.use(express.json());
@@ -18,9 +18,14 @@ const phones = JSON.parse(
 ));
 
 app.get('/phones', (req, res) => {
-  console.log('Server is running');
+  console.log(`Server running on http://localhost:${PORT}`);
   res.setHeader('Access-Control-Allow-Origin', '*')
   res.send(phones);
 });
 
-app.listen(port);
+app.use('*',(req, res) => {
+  res.status(404);
+  res.send('Page not found');
+});
+
+app.listen(PORT);
