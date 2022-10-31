@@ -23,7 +23,7 @@ export const App: React.FC = () =>  {
     getProductsFromServer();
   },[]);
 
-  return (<p></p>);
+  return (<h1></h1>);
 };
 
 
