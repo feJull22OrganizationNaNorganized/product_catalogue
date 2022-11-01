@@ -1,6 +1,7 @@
 import React from 'react';
 import './PhoneCard.scss';
-import iphone from '../../images/iphone.png';
+
+const iphone = '../../images/photo_2022-11-01_14-42-11';
 
 export const PhoneCard: React.FC = () => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import './PhonesCatalog.scss';
-import { PhoneCard } from '../PhoneCard/PhoneCard';
+import { PhoneCard } from '../PhoneCard/PheneCard';
 
 export const PhonesCatalog: React.FC = () => {
   return (
