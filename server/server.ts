@@ -7,7 +7,7 @@ import { readFile } from 'fs/promises';
 import cors from 'cors';
 
 const app = express();
-const port = 8080;
+const port = process.env.PORT || 8080;
 
 app.use(express.static('data'))
 app.use(express.json());
