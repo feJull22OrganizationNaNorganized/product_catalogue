@@ -1,3 +1,5 @@
+/*eslint linebreak-style: ["error", "windows"] */
+
 import axios from 'axios';
 
 axios.defaults.baseURL = 'http://localhost:8080';
