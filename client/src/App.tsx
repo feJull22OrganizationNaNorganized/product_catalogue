@@ -1,8 +1,11 @@
+/*eslint linebreak-style: ["error", "windows"] */
 import React from 'react';
-import { 
-  useEffect, 
+import {
+  useEffect,
   useState,
 } from 'react';
+import { Home } from './components/Home/Home';
+import { PhonesCatalog } from './components/PhonesCatalog/PhonesCatalog';
 
 import { Iphones } from './types/Iphones';
 import { getAllProducts } from './api/iphones';
@@ -23,5 +26,7 @@ export const App: React.FC = () =>  {
     getProductsFromServer();
   },[]);
 
-  return (<h1>TEST OUTPUT</h1>);
+  return (
+    < PhonesCatalog/>
+  );
 };
