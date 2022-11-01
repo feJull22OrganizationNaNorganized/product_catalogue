@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/product_catalogue/static/css/main.073c9b0a.css",
-    "main.js": "/product_catalogue/static/js/main.28a01b37.js",
+    "main.css": "/product_catalogue/static/css/main.ec68f46b.css",
+    "main.js": "/product_catalogue/static/js/main.c691854c.js",
+    "static/media/iphone.png": "/product_catalogue/static/media/iphone.24273ffe3e6427c1b79a.png",
     "index.html": "/product_catalogue/index.html",
-    "main.073c9b0a.css.map": "/product_catalogue/static/css/main.073c9b0a.css.map",
-    "main.28a01b37.js.map": "/product_catalogue/static/js/main.28a01b37.js.map"
+    "main.ec68f46b.css.map": "/product_catalogue/static/css/main.ec68f46b.css.map",
+    "main.c691854c.js.map": "/product_catalogue/static/js/main.c691854c.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.28a01b37.js"
+    "static/css/main.ec68f46b.css",
+    "static/js/main.c691854c.js"
   ]
 }
