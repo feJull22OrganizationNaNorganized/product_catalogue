@@ -4,12 +4,14 @@ import express from 'express';
 import path from 'path';
 // import phonesFromServer from '../data/api/phones.json'
 import { readFile } from 'fs/promises';
+import cors from 'cors';
 
 const app = express();
 const port = 8080;
 
-app.use(express.static(path.resolve('public')));
+app.use(express.static('data'))
 app.use(express.json());
+app.use(cors());
 
 const phones = JSON.parse(
   await readFile(

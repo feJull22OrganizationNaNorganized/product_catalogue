@@ -1,3 +1,6 @@
 'use strict';
 
-export const Home = () => {}; 
+export const Home = () => {
+
+  return('666');
+}; 

@@ -1,0 +1,32 @@
+@import '../../Utilities/mixins.scss';
+@import '../../Utilities/Container.scss';
+
+.phones {
+  &__cards {
+
+    display: block;
+
+    @include onTablet {
+      display: grid;
+      gap: 40px 16px;
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center;
+    }
+
+    @include onDesktop {
+      display: grid;
+      gap: 40px 16px;
+      grid-template-columns: repeat(4, 1fr);
+      justify-content: center;
+    }
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: 32px;
+
+    @include onTablet {
+      font-size: 48px;
+    }
+  }
+}
