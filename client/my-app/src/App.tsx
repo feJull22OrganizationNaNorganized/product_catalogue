@@ -9,19 +9,19 @@ import { getAllProducts } from './api/iphones';
 import { Badrequest } from './404/404';
 
 export const App: React.FC = () => {
-  const [products, setProducts] = useState<Iphones[] | []>([]);
+  const [products, setProducts] = useState<Iphones[]>([]);
   const [errorReq, setErrorReq] = useState('');
 
-  useEffect(() => {
-    async function getProductsFromServer() {
-      try {
-        const allIphones = await getAllProducts();
-        setProducts(allIphones);
-      } catch (error) {
-        setErrorReq(`${error}`);
-      }
+  async function getProductsFromServer() {
+    try {
+      const allIphones = await getAllProducts();
+      setProducts(allIphones);
+    } catch (error) {
+      setErrorReq(`${error}`);
     }
+  }
 
+  useEffect(() => {
     getProductsFromServer();
   }, []);
 
