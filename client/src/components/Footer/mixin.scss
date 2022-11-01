@@ -1,0 +1,11 @@
+@mixin onMokup {
+  @media (min-width: 640px) and (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin onPhone {
+  @media (min-width: 320px) and (max-width: 639px) {
+    @content;
+  }
+}

@@ -1,0 +1,177 @@
+@mixin onMokup {
+  @media (min-width: 640px) and (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin onPhone {
+  @media (min-width: 320px) and (max-width: 639px) {
+    @content;
+  }
+}
+.footer {
+  // height: var(--footer-height);
+  max-width: 1200px;
+  // margin: 0 auto;
+  display: flex;
+  align-items: center;
+  height: 100px;
+  margin-top: 34px;
+
+  position: relative;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  height: 30px;
+  width: 100%;
+
+  padding-bottom: 32px;
+
+  @include onPhone {
+    height: 320px;
+    padding-bottom: 40px;
+  }
+
+  &__container {
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include onPhone {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+      margin-top: 64px;
+      margin-left: 16px;
+    }
+
+    @include onMokup {
+      margin: 0 auto;
+    }
+  }
+
+}
+
+.contacts {
+  display: flex;
+  gap: 107px;
+  margin-left: 289px;
+  margin-right: 260px;
+
+  @include onPhone {
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 32px;
+    margin-left: 0;
+    margin-right: 0;
+
+  }
+
+  @include onMokup {
+    gap: 13px;
+    margin-left: 108px;
+    margin-right: 80px;
+  }
+}
+
+.images {
+  position: relative;
+}
+
+.hand {
+  position: absolute;
+  left: 50.2%;
+  right: 36.15%;
+  top: 0%;
+  bottom: 47.91%;
+  width: 12px;
+  height: 16px;
+}
+
+.contacts__info {
+  text-transform: uppercase;
+  color: #89939a;
+  font-family: 'Mont';
+  font-style: normal;
+  font-weight: 800;
+  size: 12px;
+  line-height: 11px;
+  letter-spacing: 0.04em;
+}
+
+.to_top {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+
+  @include onPhone {
+    margin-top: 40px;
+    margin-left: 101px;
+
+  }
+
+}
+
+.container_circle {
+  position: relative;
+}
+
+.vector {
+  position: absolute;
+  left: 34.83%;
+  right: 68.83%;
+  top: 36.67%;
+  bottom: -25%;
+}
+
+.top {
+  width: 70px;
+  font-family: 'Mont';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: right;
+  color: #89939a;
+}
+
+// @media (min-width: 320px) and (max-width: 639px) {
+//   .footer {
+//     height: 320px;
+
+//   }
+//   .footer__container {
+//     flex-direction: column;
+//     align-items: flex-start;
+//     gap: 0;
+//     margin-top: 64px;
+//     margin-left: 16px;
+   
+    
+//   }
+
+//   .contacts {
+//     flex-direction: column;
+//     gap: 16px;
+//     margin-top: 32px;
+//     margin-left: 0;
+//     margin-right: 0;
+//   }
+
+//   .to_top {
+//     margin-top: 40px;
+//     margin-left: 101px;
+//   }
+
+// }
+
+
+@media (min-width: 640px) and (max-width: 1199px) {
+ 
+  .contacts {
+    gap: 13px;
+    margin-left: 108px;
+    margin-right: 80px;
+  }
+}
