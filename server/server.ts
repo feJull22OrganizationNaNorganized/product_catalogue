@@ -16,7 +16,7 @@ app.use(express.json());
 
 const phones = JSON.parse(
   await readFile(
-    new URL('data/api/phones.json', import.meta.url),
+    new URL('dist/data/api/phones.json', import.meta.url),
     'utf-8'
 ));
 
