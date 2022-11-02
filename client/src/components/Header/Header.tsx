@@ -80,7 +80,7 @@ export function Header() {
                 </div>
               </a>
             </div>
-            <a href="#">
+            <a href="#menu">
               <div className="container_img">
                 <img
                   className="cart"
@@ -92,7 +92,7 @@ export function Header() {
           </div>
         </div>
       </div>
-      {/* <BurgerMenu /> */}
+      <BurgerMenu />
     </>
   );
 }

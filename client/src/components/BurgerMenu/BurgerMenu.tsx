@@ -25,7 +25,7 @@ export function BurgerMenu() {
               </div>
             </div>
             <div className="close">
-              <a href="#">
+              <a href="#header">
                 <div className="container_img">
                   <img
                     className="icon_close"
@@ -64,6 +64,26 @@ export function BurgerMenu() {
               </a>
             </li>
           </ul>
+          <div className="top_img">
+            <a href="#header">
+              <div className="container_img">
+                <img
+                  className="heart"
+                  src={require('../../images/heart.png')}
+                  alt="heart"
+                />
+              </div>
+            </a>
+            <a href="">
+              <div className="container_img">
+                <img
+                  className="bucket"
+                  src={require('../../images/bucket.png')}
+                  alt="bucket"
+                />
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </nav>
