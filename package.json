@@ -4,10 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./server/dist",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky install",
-    "satrt:server": "npm run start --prefix server"
+    "satrt": "npm run start --prefix server"
   },
   "repository": {
     "type": "git",
