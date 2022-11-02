@@ -18,7 +18,8 @@
 
 .header {
   height: var(--header-hight);
-  padding-left: 24px;
+  padding-left: 25px;
+  padding-right: 25px;
   padding-top: 25px;
 
   &__container {
@@ -32,7 +33,7 @@
       // max-width: 320px;
       margin: 0;
       // gap: 209px;
-      // justify-content: space-between;
+      justify-content: space-between;
     }
 
     @include onMokup {

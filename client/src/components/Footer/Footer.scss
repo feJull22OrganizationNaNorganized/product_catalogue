@@ -11,9 +11,6 @@
 }
 .footer {
   // height: var(--footer-height);
-  max-width: 1200px;
-  display: flex;
-  align-items: center;
   height: 100px;
   margin-top: 34px;
   width: 100%;
@@ -52,6 +49,11 @@
     }
   }
 
+}
+
+.container__center {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .contacts {
