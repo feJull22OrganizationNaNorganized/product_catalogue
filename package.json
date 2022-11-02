@@ -1,0 +1,27 @@
+{
+  "name": "product_catalog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./server/dist",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/feJull22OrganizationNaNorganized/product_catalog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/feJull22OrganizationNaNorganized/product_catalog/issues"
+  },
+  "homepage": "https://github.com/feJull22OrganizationNaNorganized/product_catalog#readme",
+  "devDependencies": {
+    "husky": "^8.0.1"
+  },
+  "engines": {
+    "node": "14.18.2"
+  }}
