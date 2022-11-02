@@ -1,0 +1,28 @@
+a {
+  text-decoration: none;
+}
+
+.pagination {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+
+  &__link {
+    display: inline-block;
+    color: #000;
+    margin-right: 33px;
+    font-size: 14px;
+    border: 1px solid #E2E6E9;
+    border-radius: 50%;
+    text-align: center;
+    width: 40px;
+  }
+}

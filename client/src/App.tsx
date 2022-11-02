@@ -1,4 +1,3 @@
-/*eslint linebreak-style: ["error", "windows"] */
 import React from 'react';
 import {
   useEffect,
@@ -12,6 +11,8 @@ import { getAllProducts } from './api/iphones';
 
 export const App: React.FC = () =>  {
   const [products, setProducts] = useState<Iphones[]>([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [phonesPerPage] = useState(16);
 
   async function getProductsFromServer() {
     try {
@@ -26,7 +27,22 @@ export const App: React.FC = () =>  {
     getProductsFromServer();
   },[]);
 
+  const lastIphonesIndex = currentPage * phonesPerPage;
+  const firstIphonesIndex = lastIphonesIndex - phonesPerPage;
+  const currentIphones = products.slice(firstIphonesIndex, lastIphonesIndex);
+
+  const handlePaginate = (PageNumber: number) => setCurrentPage(PageNumber);
+
+  console.log(products);
   return (
-    < PhonesCatalog/>
+    <>
+      < PhonesCatalog 
+        currentIphones={currentIphones} 
+        phonesPerPage={phonesPerPage}
+        handlePaginate={handlePaginate}
+        products={products}
+      />
+    </>
+
   );
 };

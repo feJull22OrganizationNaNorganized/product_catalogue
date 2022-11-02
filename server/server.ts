@@ -6,12 +6,13 @@ import path from 'path';
 import { readFile } from 'fs/promises';
 import cors from 'cors';
 
+
 const app = express();
 const port = 8080;
+app.use(cors())
 
 app.use(express.static('data'))
 app.use(express.json());
-app.use(cors());
 
 const phones = JSON.parse(
   await readFile(
