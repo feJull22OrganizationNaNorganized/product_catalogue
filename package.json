@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky install",
-    "satrt": "npm run start --prefix server"
+    "satrt": "npm run start --prefix server",
+    "build": "swc src -d dist"
   },
   "repository": {
     "type": "git",
