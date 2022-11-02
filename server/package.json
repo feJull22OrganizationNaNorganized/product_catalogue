@@ -14,8 +14,8 @@
     "postinstall": "tsc",
     "watch-ts": "tsc -w",
     "deploy": "git add . && git commit -m Heroku && git push heroku main",
-    "satrt:server": "npm run start --prefix server",
-    "start:heroku": "node dist/feJull22OrganizationNaNorganized/server/server.ts"
+
+    "start:server": "node dist/fe-jul-catalog-server/server/server.ts --prefix server"
   },
   "keywords": [],
   "author": "",
