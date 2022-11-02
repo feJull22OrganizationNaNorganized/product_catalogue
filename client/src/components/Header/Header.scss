@@ -93,11 +93,11 @@
   gap: 50px;
 }
 
-.is-active {
+.active {
   color: black;
 }
 
-.is-active::after {
+.active::after {
   content: "";
   position: absolute;
   bottom: -25px;
