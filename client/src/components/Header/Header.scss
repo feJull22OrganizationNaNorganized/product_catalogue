@@ -10,22 +10,35 @@
   }
 }
 
+@mixin onStandartScreen {
+  @media (min-width: 1200px) and (max-width: 1201px) {
+    @content;
+  }
+}
+
 .header {
   height: var(--header-hight);
-  // display: flex;
-  // align-items: center;
   padding-left: 24px;
   padding-top: 25px;
 
   &__container {
     display: flex;
     align-items: center;
-    // gap: 190px;
+    gap: 760px;
 
     @include onPhone {
       align-items: flex-start;
       max-width: 320px;
       margin: 0;
+      gap: 209px;
+    }
+
+    @include onMokup {
+      gap: 120px;
+    }
+
+    @include onStandartScreen {
+      gap: 520px;
     }
   }
 
@@ -43,7 +56,6 @@
     display: flex;
     gap: 64px;
     margin-left: 48px;
-    margin-right: 730px;
 
     @include onPhone {
       display: none;
@@ -51,10 +63,17 @@
     }
 
     @include onMokup {
-      margin-right: 120px;
+      margin-left: 32px;
+      gap: 32px;
     }
   }
 
+}
+
+.menu__container {
+  margin: 0;
+  display: flex;
+  align-items: center;
 }
 
 .nav__link {
@@ -91,6 +110,11 @@
 .top_img {
   display: flex;
   gap: 50px;
+
+  @include onMokup {
+    gap: 37px;
+
+  }
 }
 
 .is-active {

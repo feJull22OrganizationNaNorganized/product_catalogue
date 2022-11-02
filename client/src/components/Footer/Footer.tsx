@@ -1,5 +1,7 @@
+/* eslint-disable linebreak-style */
 import React from 'react';
 import './Footer.scss';
+import '../../styles/index.scss';
 
 
 export function Footer () {
