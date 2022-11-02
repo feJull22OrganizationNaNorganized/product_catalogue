@@ -24,13 +24,15 @@
   &__container {
     display: flex;
     align-items: center;
-    gap: 760px;
+    justify-content: space-between;
+    // gap: 760px;
 
     @include onPhone {
       align-items: flex-start;
-      max-width: 320px;
+      // max-width: 320px;
       margin: 0;
-      gap: 209px;
+      // gap: 209px;
+      // justify-content: space-between;
     }
 
     @include onMokup {
