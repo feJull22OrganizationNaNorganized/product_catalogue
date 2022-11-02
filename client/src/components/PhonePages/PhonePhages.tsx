@@ -9,9 +9,20 @@ type Props = {
   phonesPerPage: number;
   handlePaginate: (param: number) => void;
   currentIphones: Iphones[];
+  nextPage: () => void;
+  beforePage:() => void;
+  currentPage: number;
 }
 
-export const PhonePhages: React.FC<Props> = ({ products, phonesPerPage, handlePaginate, currentIphones }) => {
+export const PhonePhages: React.FC<Props> = ({ 
+  products, 
+  phonesPerPage, 
+  handlePaginate, 
+  currentIphones, 
+  nextPage,
+  beforePage,
+  currentPage,
+}) => {
   return (
     <div>
       <ul className="phones__cards">
@@ -26,6 +37,9 @@ export const PhonePhages: React.FC<Props> = ({ products, phonesPerPage, handlePa
         products={products.length}
         phonesPerPage={phonesPerPage}
         handlePaginate={handlePaginate}
+        nextPage={nextPage}
+        beforePage={beforePage}
+        currentPage={currentPage}
       />
     </div>
   );

@@ -30,8 +30,13 @@ export const App: React.FC = () =>  {
   const lastIphonesIndex = currentPage * phonesPerPage;
   const firstIphonesIndex = lastIphonesIndex - phonesPerPage;
   const currentIphones = products.slice(firstIphonesIndex, lastIphonesIndex);
+  const pageCount = products.length / phonesPerPage;
 
   const handlePaginate = (PageNumber: number) => setCurrentPage(PageNumber);
+  const nextPage = () => currentPage < pageCount ? setCurrentPage(prev => prev + 1) 
+    : setCurrentPage(prev => prev);
+  const beforePage = () => currentPage > 1 ? setCurrentPage(prev => prev - 1) 
+    : setCurrentPage(prev => prev);
 
   console.log(products);
   return (
@@ -41,6 +46,9 @@ export const App: React.FC = () =>  {
         phonesPerPage={phonesPerPage}
         handlePaginate={handlePaginate}
         products={products}
+        nextPage={nextPage}
+        beforePage={beforePage}
+        currentPage={currentPage}
       />
     </>
 

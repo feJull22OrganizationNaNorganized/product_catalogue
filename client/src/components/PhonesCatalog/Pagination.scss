@@ -13,16 +13,45 @@ a {
     justify-content: center;
     text-align: center;
     align-items: center;
+    gap: 16px;
   }
 
   &__link {
     display: inline-block;
     color: #000;
-    margin-right: 33px;
     font-size: 14px;
     border: 1px solid #E2E6E9;
     border-radius: 50%;
     text-align: center;
     width: 40px;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
+
+  &__image {
+    display: inline-block;
+    border: 1px solid #B4BDC4;
+    border-radius: 50%;
+    text-align: center;
+    padding: 16px;
+    margin: 16px;
+    cursor: pointer;
+  }
+}
+
+.active {
+  display: inline-block;
+  color: #fff;
+  font-size: 14px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  text-align: center;
+  width: 40px;
+  background-color:#0F0F11;
+}
+
+.disabled {
+  display: none;
 }

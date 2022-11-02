@@ -2,16 +2,26 @@ import React from 'react';
 import './PhonesCatalog.scss';
 import { PhonePhages } from '../PhonePages/PhonePhages';
 import { Iphones } from '../../types/Iphones';
-import { Pagination } from './Pagination';
 
 type Props = {
   currentIphones: Iphones[];
   phonesPerPage: number;
   handlePaginate: (param: number) => void;
   products: Iphones[];
+  nextPage: () => void;
+  beforePage: () => void;
+  currentPage: number;
 };
 
-export const PhonesCatalog: React.FC<Props> = ({ currentIphones, phonesPerPage, handlePaginate, products }) => {
+export const PhonesCatalog: React.FC<Props> = ({ 
+  currentIphones, 
+  phonesPerPage, 
+  handlePaginate, 
+  products,
+  nextPage,
+  beforePage,
+  currentPage,
+}) => {
   return (
     <section className="phones">
       <div className="container">
@@ -22,7 +32,11 @@ export const PhonesCatalog: React.FC<Props> = ({ currentIphones, phonesPerPage, 
               currentIphones={currentIphones} 
               products={products}
               phonesPerPage={phonesPerPage}
-              handlePaginate={handlePaginate}/>
+              handlePaginate={handlePaginate}
+              nextPage={nextPage}
+              beforePage={beforePage}
+              currentPage={currentPage}
+            />
           </div>
         </div>
       </div>
