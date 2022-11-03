@@ -10,7 +10,7 @@ const app = express();
 const port = process.env.PORT || 8080;
 
 app.use(cors());
-app.use(express.static('data'))
+app.use(express.static('dist/dist/data'))
 app.use(express.json());
 
 
@@ -22,7 +22,6 @@ const phones = JSON.parse(
 
 app.get('/phones', (req, res) => {
   console.log('Server is running');
-  res.setHeader('Access-Control-Allow-Origin', '*')
   res.send(phones);
 });
 

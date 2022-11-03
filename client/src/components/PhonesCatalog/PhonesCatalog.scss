@@ -1,13 +1,21 @@
 @import '../../Utilities/mixins.scss';
 @import '../../Utilities/Container.scss';
 
+html {
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
 .phones {
 display: block;
+
 
   &__cards {
 
     display: block;
-    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
 
     @include onTablet {
       display: grid;

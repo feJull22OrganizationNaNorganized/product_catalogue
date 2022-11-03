@@ -12,6 +12,6 @@ const phones = JSON.parse(await readFile(new URL('dist/data/api/phones.json', im
 app.get('/phones', (req, res) => {
     console.log('Server is running');
     res.setHeader('Access-Control-Allow-Origin', '*');
-    res.send(phones);
+    res.send(<h1>HELLO HEROKU</h1>);
 });
 app.listen(port);

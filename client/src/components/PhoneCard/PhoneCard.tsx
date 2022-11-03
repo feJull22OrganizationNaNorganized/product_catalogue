@@ -22,7 +22,7 @@ export const PhoneCard: React.FC<Props> = ({ phone }) => {
     <section className="card">
       <div className="card__content">
         <img 
-          src={`http://localhost:8080/${phone.image}`}
+          src={`https://fe-jul-catalog-server.herokuapp.com/${phone.image}`}
           className="card__image"
           alt="iphone"
         />
