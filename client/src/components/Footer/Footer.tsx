@@ -1,47 +1,47 @@
 /* eslint-disable linebreak-style */
 import React from 'react';
-import './Footer.scss';
+import s from './Footer.module.scss';
 import '../../styles/index.scss';
 
 
 export function Footer () {
   return (
-    <div className='footer'>
-      <div className="container__center">
-        <div className="footer__container">
-          <div className="images">
-            <div className='nice_gadgets'>
+    <div className={s.footer}>
+      <div className={s.container__center}>
+        <div className={s.footer__container}>
+          <div className={s.images}>
+            <div className={s.nice_gadgets}>
               <img
-                className='nice'
+                className={s.nice}
                 src={require('../../images/Nice_Gadgets.png')}
                 alt="footerLogo"
               />
             </div>
-            <div className='img_hand'>
+            <div className={s.img_hand}>
               <img
-                className='hand'
+                className={s.hand}
                 src={require('../../images/imageHand.png')}
                 alt="hand_ok"
               />
             </div>
           </div>
-          <div className='contacts'>
-            <div className='contacts__info'>Github</div>
-            <div className='contacts__info'>Contacts</div>
-            <div className='contacts__info'>Rights</div>
+          <div className={s.contacts}>
+            <div className={s.contacts__info}>Github</div>
+            <div className={s.contacts__info}>Contacts</div>
+            <div className={s.contacts__info}>Rights</div>
           </div>
-          <div className='to_top'>
-            <div className='top'>Back to top</div>
+          <div className={s.to_top}>
+            <div className={s.top}>Back to top</div>
             <a href="#header">
-              <div className='img_top'>
-                <div className='container_circle'>
+              <div className={s.img_top}>
+                <div className={s.container_circle}>
                   <img
-                    className='rectangle'
+                    className={s.rectangle}
                     src={require('../../images/Rectangle.png')}
                     alt="rectangle"
                   />
                   <img
-                    className='vector'
+                    className={s.vector}
                     src={require('../../images/Vector.png')}
                     alt="vector"
                   />
