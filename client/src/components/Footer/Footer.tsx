@@ -1,10 +1,9 @@
 import React from 'react';
 import './Footer.scss';
 
-
 export function Footer () {
   return (
-    <div className='footer'>
+    <div className='footer' >
       <div className="footer__container">
         <div className="images">
           <div className='nice_gadgets'>

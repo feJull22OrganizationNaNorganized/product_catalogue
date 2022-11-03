@@ -1,13 +1,14 @@
 import React from 'react';
 import './Header.scss';
-import { NavLink, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { PageNavLink } from '../PageNavLink/PageNavLink';
 
 export function Header() {
 
   const setActive = ({isActive}) => isActive ? 'is-active' : '';
 
   return (
-    <div className="header">
+    <div className="header" id='header'>
       <div className="header__container">
         <div className="images">
           <div className="nice_gadgets">
@@ -29,28 +30,34 @@ export function Header() {
           <div className="active">
             <ul className="nav__list">
               <li className="nav__item">
-                <NavLink className="nav__link" to="/" >Home
-                </NavLink>
+                {/* <NavLink
+                  className={({isActive})=> classNames('nav__link', {'is-active': isActive})}
+                  to="/"
+                >Home
+                </NavLink> */}
+                <PageNavLink to='/' text='home'/>
               </li>
             </ul>
             <div className='line'></div>
           </div>
           <ul className="nav__list">
             <li className="nav__item">
-              <NavLink className="nav__link" to="/product_catalogue" >Phones
-              </NavLink>
+              {/* <NavLink
+                className={({ isActive }) => classNames('nav__link', { 'is-active': isActive })}
+                to="/product_catalogue"
+              >Phones
+              </NavLink> */}
+              <PageNavLink to='/product_catalogue' text='PHONES' />
             </li>
           </ul>
           <ul className="nav__list">
             <li className="nav__item">
-              <NavLink className="nav__link" to="/tablets" >Tablets
-              </NavLink>
+              <PageNavLink to='/tablets' text='tablets' />
             </li>
           </ul>
           <ul className="nav__list">
             <li className="nav__item">
-              <NavLink className="nav__link" to="*" >Accessories
-              </NavLink>
+              <PageNavLink to='/Accessories' text='Accessories' />
             </li>
           </ul>
         </nav>
@@ -75,7 +82,7 @@ export function Header() {
               </div>
             </a>
           </div>
-          <NavLink to="/">
+          <Link to="/">
             <div className="container_img">
               <img
                 className="cart"
@@ -83,7 +90,7 @@ export function Header() {
                 alt="cart"
               />
             </div>
-          </NavLink>
+          </Link>
         </div>
       </div>
     </div>

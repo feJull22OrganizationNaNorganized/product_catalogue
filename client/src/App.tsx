@@ -32,6 +32,7 @@ export const App: React.FC = () =>  {
     getProductsFromServer();
   }, []);
   
+  console.log(location);
 
   return (
     <>
