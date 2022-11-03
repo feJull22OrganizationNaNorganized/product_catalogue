@@ -22,7 +22,6 @@ const phones = JSON.parse(
 
 app.get('/phones', (req, res) => {
   console.log('Server is running');
-  res.setHeader('Access-Control-Allow-Origin', '*')
   res.send(phones);
 });
 
