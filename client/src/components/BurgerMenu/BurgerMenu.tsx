@@ -1,34 +1,34 @@
 /* eslint-disable linebreak-style */
 import React from 'react';
-import './BurgerMenu.scss';
+import s from './BurgerMenu.module.scss';
 
 export function BurgerMenu() {
   return (
-    <nav className="page__menu menu" id="menu">
-      <div className="container">
-        <div className="menu__content">
-          <div className="menu__container">
-            <div className="images">
-              <div className="nice_gadgets">
+    <nav className={s.page__menu} id="menu">
+      <div className={s.container}>
+        <div className={s.menu__content}>
+          <div className={s.menu__container}>
+            <div className={s.images}>
+              <div className={s.nice_gadgets}>
                 <img
-                  className="nice"
+                  className={s.nice}
                   src={require('../../images/NiceGadgetsBlack.png')}
                   alt="footerLogo"
                 />
               </div>
-              <div className="img_hand_black">
+              <div className={s.img_hand_black}>
                 <img
-                  className="hand_black"
+                  className={s.hand_black}
                   src={require('../../images/hand_small.png')}
                   alt="hand_small"
                 />
               </div>
             </div>
-            <div className="close">
+            <div className={s.close}>
               <a href="#header">
-                <div className="container_img">
+                <div className={s.container_img}>
                   <img
-                    className="icon_close"
+                    className={s.icon_close}
                     src={require('../../images/Close.png')}
                     alt="Сart"
                   />
@@ -36,48 +36,48 @@ export function BurgerMenu() {
               </a>
             </div>
           </div>
-          <ul className="menu__list">
-            <li className="menu__item">
-              <a href="#" className="menu__link">
+          <ul className={s.menu__list}>
+            <li className={s.menu__item}>
+              <a href="#" className={s.menu__link}>
                 Home
               </a>
             </li>
 
-            <li className="menu__item">
-              <a href="#recommended" className="menu__link">
+            <li className={s.menu__item}>
+              <a href="#" className={s.menu__link}>
                 Phones
               </a>
             </li>
 
-            <li className="menu__item">
+            <li className={s.menu__item}>
               <a
-                href="#browse_bose_products_by_category"
-                className="menu__link"
+                href="#"
+                className={s.menu__link}
               >
                 Tablets
               </a>
             </li>
 
-            <li className="menu__item">
-              <a href="#why_buy_direct_from_bose" className="menu__link">
+            <li className={s.menu__item}>
+              <a href="#" className={s.menu__link}>
                 Accessories
               </a>
             </li>
           </ul>
-          <div className="top_img">
+          <div className={s.top_img}>
             <a href="#header">
-              <div className="container_img">
+              <div className={s.container_img}>
                 <img
-                  className="heart"
+                  className={s.heart}
                   src={require('../../images/heart.png')}
                   alt="heart"
                 />
               </div>
             </a>
             <a href="">
-              <div className="container_img">
+              <div className={s.container_img}>
                 <img
-                  className="bucket"
+                  className={s.bucket}
                   src={require('../../images/bucket.png')}
                   alt="bucket"
                 />
@@ -89,11 +89,3 @@ export function BurgerMenu() {
     </nav>
   );
 }
-
-// declare module '*.scss' {
-//   interface IClassNames {
-//     [className: string]: string
-//   }
-//   const classNames: IClassNames;
-//   export = classNames;
-// }

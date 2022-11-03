@@ -47,7 +47,7 @@
 
   @include onPhone {
     align-items: flex-start;
-    gap: 210px;
+    justify-content: space-between;
     margin-top: 14px;
     margin-left: 16px;
     align-items: center;
@@ -116,7 +116,10 @@
 
   @include onMokup {
     gap: 37px;
+  }
 
+  @include onPhone {
+    width: 10px;
   }
 }
 

@@ -80,15 +80,15 @@ export function Header() {
                 </div>
               </a>
             </div>
-            <a href="#menu">
-              <div className={s.container_img}>
+            <div className={s.container_cart}>
+              <a href="#menu">
                 <img
                   className={s.cart}
                   src={require('../../images/cart.png')}
                   alt="Сart"
                 />
-              </div>
-            </a>
+              </a>
+            </div>
           </div>
         </div>
       </div>
