@@ -12,8 +12,8 @@ const __dirname = path.resolve();
 const app = express();
 const port = process.env.PORT || 8080;
 app.use(cors());
-console.log('123',__dirname)
-app.use(express.static(path.join(__dirname, 'dist/data')));
+
+app.use(express.static(path.join(__dirname, 'dist/dist/data')));
 app.use(express.json());
 const phones = JSON.parse(await readFile(new URL('dist/data/api/phones.json', import.meta.url), 'utf-8'));
 app.get('/phones', (req, res) => {
