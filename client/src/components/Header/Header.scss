@@ -11,14 +11,22 @@
 }
 
 .header {
+  width: 100%;
   height: var(--header-hight);
   // display: flex;
   // align-items: center;
-  padding-left: 24px;
+  // padding-left: 24px;
   padding-top: 25px;
 
+  .header__left-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   &__container {
     display: flex;
+    // align-items: center;
+    justify-content: space-between;
     align-items: center;
     // gap: 190px;
 
@@ -81,7 +89,7 @@
 .hand {
   position: absolute;
   left: 50.2%;
-  right: 36.15%;
+  // right: 36.15%;
   top: 0%;
   bottom: 47.91%;
   width: 12px;

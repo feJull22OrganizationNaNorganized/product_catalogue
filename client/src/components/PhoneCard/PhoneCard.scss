@@ -94,6 +94,8 @@
     border-radius: 8px;
     margin-right: 8px;
     transition: 300ms box-shadow;
+    border: none;
+    cursor: pointer;
 
     &:hover {
       box-shadow: 0px 3px 13px rgba(23, 32, 49, 0.4);
@@ -114,4 +116,24 @@
   &__heart:hover {
     background-color: pink;
   }
+}
+
+.card__cart-active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 75%;
+  color: #216CFF;
+  font-family: 'Mont';
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  background: #FFF;
+  border-radius: 8px;
+  margin-right: 8px;
+  transition: 300ms box-shadow;
+  cursor: pointer;
+  // border: 1 px solid #E2E6E9;
+  outline: 0;
+  border: 1px solid #E2E6E9;
 }
