@@ -10,11 +10,11 @@
   @include onPhone {
     display: inline;
     background-color: white;
-    height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    bottom: 0;
 
     transform: translateX(-100%);
     transition: transform 0.3s;
@@ -70,6 +70,14 @@
     .menu__link {
       color: #89939a;
       text-decoration: none;
+
+      transition: border-color 0.3s;
+
+      &:hover {
+        border-color:  #313237;
+        color:  #313237;
+      }
+
     }
 
     .menu__container {
