@@ -1,35 +1,40 @@
 import React from 'react';
+import { Iphones } from '../../types/Iphones';
 import './PhoneCard.scss';
+
+type Props = {
+  phone: Iphones;
+}
 // import iphone from '../../images/iphone.png';
 
-export const PhoneCard: React.FC = () => {
+export const PhoneCard: React.FC<Props> = ({ phone }) => {
   return (
     <section className="card">
       <div className="card__content">
         <img 
-          src={require('../../images/iphone.png')}
+          src={`http://localhost:8080/${phone.image}`}
           className="card__image"
           alt="iphone"
         />
         <div className="card__name">
-          Apple iPhone 11 128GB Purple (iMT9G2FS/A)
+          {phone.name}
         </div>
         <div className="card__price">
-          <div className="card__price-new">$799</div>
-          <div className="card__price-old">$899</div>
+          <div className="card__price-new">${phone.price}</div>
+          <div className="card__price-old">${phone.fullPrice}</div>
         </div>
         <div className="card__characteristics">
           <div className="card__description">
             <div className="card__description-title">Screen</div>
-            <div className="card__description-value">6.2” IPS</div>
+            <div className="card__description-value">{phone.screen}</div>
           </div>
           <div className="card__description">
             <div className="card__description-title">Capacity</div>
-            <div className="card__description-value">128 GB</div>
+            <div className="card__description-value">{phone.capacity}</div>
           </div>
           <div className="card__description">
             <div className="card__description-title">RAM</div>
-            <div className="card__description-value">4 GB</div>
+            <div className="card__description-value">{phone.ram}</div>
           </div>
         </div>
         <div className="card__buttons">

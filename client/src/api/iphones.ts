@@ -2,7 +2,7 @@
 
 import axios from 'axios';
 
-axios.defaults.baseURL = 'http://localhost:8080';
+axios.defaults.baseURL = 'https://fe-jul-catalog-server.herokuapp.com/';
 
 export function getAllProducts() {
   return axios.get('/phones')
