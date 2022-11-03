@@ -10,7 +10,7 @@ const app = express();
 const port = process.env.PORT || 8080;
 
 app.use(cors());
-app.use(express.static(path.join(__dirname, 'dist/dist/data')));
+app.use(express.static('data'))
 app.use(express.json());
 
 
