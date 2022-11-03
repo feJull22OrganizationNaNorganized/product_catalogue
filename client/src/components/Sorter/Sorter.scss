@@ -1,0 +1,76 @@
+.sorter {
+  span {
+    color: #89939A;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  &__dropdowns {
+    display: flex;
+    gap: 16px;
+    margin-top: 40px;
+
+    &--sort {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        color: #89939A;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+      }
+
+      select {
+        width: 176px;
+        height: 40px;
+        border: 1px solid #B4BDC3;
+        border-radius: 8px;
+        background-color: transparent;
+        color: #0F0F11;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 21px;
+
+        option {
+          color: #0F0F11;
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 21px;
+        }
+      }
+    }
+
+    &--per-page {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        color: #89939A;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+      }
+
+      select {
+        width: 128px;
+        height: 40px;
+        border: 1px solid #B4BDC3;
+        border-radius: 8px;
+        background-color: transparent;
+        color: #0F0F11;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 21px;
+
+        option {
+          color: #0F0F11;
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 21px;
+        }
+      }
+    }
+  }
+}

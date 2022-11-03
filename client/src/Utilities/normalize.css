@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "Mont-Regular";
+  src: local("Mont-Regular"),
+   url("../fonts/Mont-Regular.otf") format("truetype");
+}
+
+* {
+  font-family: "Mont-Regular";
+}
+
+.main_wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
