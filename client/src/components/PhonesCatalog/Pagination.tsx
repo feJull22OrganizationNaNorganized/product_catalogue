@@ -32,6 +32,7 @@ export const Pagination: React.FC<Props> = ({
       <ul className='pagination pagination__list'>
         <img
           className={(currentPage > 1) ? 'pagination__image' : 'disabled'}
+
           src={require('../../images/arrow.jpg')}
           alt="arrow"
           onClick={beforePage}
@@ -39,7 +40,9 @@ export const Pagination: React.FC<Props> = ({
         {PageNumbers.map((number) => (
           (<li key={number}>
             <a
+
               className={currentPage === number ? 'active-pagination'
+
                 : 'pagination__link'}
               href="#"
               onClick={() => handlePaginate(number)}
@@ -50,7 +53,9 @@ export const Pagination: React.FC<Props> = ({
         ))}
         <img
           className={!(currentPage >= pageCount) ? 'pagination__image' : 'disabled'}
+
           src={require('../../images/arrowBack.jpg')}
+
           alt="arrow image"
           onClick={nextPage}
         />
