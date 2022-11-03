@@ -13,7 +13,7 @@ a {
     justify-content: center;
     text-align: center;
     align-items: center;
-    gap: 16px;
+    gap: 10px;
   }
 
   &__link {
@@ -41,7 +41,7 @@ a {
   }
 }
 
-.active {
+.active-pagination {
   display: inline-block;
   color: #fff;
   font-size: 14px;
