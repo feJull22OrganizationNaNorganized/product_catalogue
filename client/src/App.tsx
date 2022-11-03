@@ -17,6 +17,10 @@ import { Iphones } from './types/Iphones';
 import { getAllProducts } from './api/iphones';
 import { Header } from './components/Header/Header';
 
+import './Utilities/normalize.css';
+import './Utilities/reset.css';
+
+
 export const App: React.FC = () =>  {
   const [products, setProducts] = useState<Iphones[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
