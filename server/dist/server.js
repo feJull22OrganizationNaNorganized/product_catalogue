@@ -7,7 +7,7 @@ import path from 'path';
 import { dirname } from 'path';
 
 
-const __dirname = path.resolve();
+// const __dirname = path.resolve();
 
 const app = express();
 const port = process.env.PORT || 8080;
