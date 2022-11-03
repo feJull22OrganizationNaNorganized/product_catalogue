@@ -25,7 +25,7 @@ export function Header() {
                 />
               </div>
             </div>
-            <nav className={s.header__menu}>
+            <nav className={s.nav}>
               <div className={s.active}>
                 <ul className={s.nav__list}>
                   <li className={s.nav__item}>
