@@ -1,9 +1,10 @@
 /* eslint-disable linebreak-style */
+import { NavLink } from 'react-router-dom';
 import React from 'react';
 import s from './Footer.module.scss';
 import '../../styles/index.scss';
 
-export function Footer () {
+export function Footer() {
   return (
     <div className={s.footer}>
       <div className={s.container__center}>
@@ -25,9 +26,19 @@ export function Footer () {
             </div>
           </div>
           <div className={s.contacts}>
-            <div className={s.contacts__info}>Github</div>
+            {/* <div className={s.contacts__info}>Github</div>
             <div className={s.contacts__info}>Contacts</div>
             <div className={s.contacts__info}>Rights</div>
+          </div> */}
+            <NavLink to="/Home" className={s.contacts__item}>
+              Github
+            </NavLink>
+            <NavLink to="/Phone" className={s.contacts__item}>
+              Contacts
+            </NavLink>
+            <NavLink to="/Tablets" className={s.contacts_item}>
+              Rights
+            </NavLink>
           </div>
           <div className={s.to_top}>
             <div className={s.top}>Back to top</div>
