@@ -1,17 +1,11 @@
-/* eslint-disable linebreak-style */
 import React from 'react';
-import { BurgerMenu } from '../BurgerMenu/BurgerMenu';
+// import './Header.scss';
 import s from './Header.module.scss';
+import { Link } from 'react-router-dom';
+import { PageNavLink } from '../PageNavLink/PageNavLink';
+import { BurgerMenu } from '../BurgerMenu/BurgerMenu';
 
-export const ROUTER = {
-  home: '/',
-  phones: '/phones',
-  tablets: '/tablets',
-  accessories: '/accessories',
-  cart: '/cart',
-};
-
-export const Header: React.FC = () => {
+export function Header() {
   return (
     <>
       <div className={s.header} id="header">
@@ -37,65 +31,59 @@ export const Header: React.FC = () => {
               <div className={s.active}>
                 <ul className={s.nav__list}>
                   <li className={s.nav__item}>
-                    <a className="nav__link is-active" href="#section-1">
-                      Home
-                    </a>
+                    <PageNavLink to="/" text="home" />
                   </li>
                 </ul>
                 <div className={s.line}></div>
               </div>
               <ul className={s.nav__list}>
                 <li className={s.nav__item}>
-                  <a className={s.nav__link} href="#section-2">
-                    Phones
-                  </a>
+                  <PageNavLink to="/product_catalogue" text="PHONES" />
                 </li>
               </ul>
               <ul className={s.nav__list}>
                 <li className={s.nav__item}>
-                  <a className={s.nav__link} href="#section-3">
-                    Tablets
-                  </a>
+                  <PageNavLink to="/tablets" text="tablets" />
                 </li>
               </ul>
               <ul className={s.nav__list}>
                 <li className={s.nav__item}>
-                  <a className={s.nav__link} href="#section-4">
-                    Accessories
-                  </a>
+                  <PageNavLink to="/Accessories" text="Accessories" />
                 </li>
               </ul>
             </nav>
           </div>
-          <div className={s.header__top}>
-            <div className={s.top_img}>
-              <a href="#header">
+          <div className={s.header__rightside}>
+            <div className={s.header__top}>
+              <div className={s.top_img}>
+                <a href="#header">
+                  <div className={s.container_img}>
+                    <img
+                      className={s.heart}
+                      src={require('../../images/heart.png')}
+                      alt="heart"
+                    />
+                  </div>
+                </a>
+                <a href="">
+                  <div className={s.container_img}>
+                    <img
+                      className={s.bucket}
+                      src={require('../../images/bucket.png')}
+                      alt="bucket"
+                    />
+                  </div>
+                </a>
+              </div>
+              <Link to="/">
                 <div className={s.container_img}>
                   <img
-                    className={s.heart}
-                    src={require('../../images/heart.png')}
-                    alt="heart"
+                    className={s.cart}
+                    src={require('../../images/Cart.svg')}
+                    alt="cart"
                   />
                 </div>
-              </a>
-              <a href="">
-                <div className={s.container_img}>
-                  <img
-                    className={s.bucket}
-                    src={require('../../images/bucket.png')}
-                    alt="bucket"
-                  />
-                </div>
-              </a>
-            </div>
-            <div className={s.container_cart}>
-              <a href="#menu">
-                <img
-                  className={s.cart}
-                  src={require('../../images/cart.png')}
-                  alt="Сart"
-                />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -103,4 +91,4 @@ export const Header: React.FC = () => {
       <BurgerMenu />
     </>
   );
-};
+}

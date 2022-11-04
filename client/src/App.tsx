@@ -15,8 +15,6 @@ import { Header } from './components/Header/Header';
 
 import './Utilities/normalize.css';
 import './Utilities/reset.css';
-
-
 import './Utilities/normalize.css';
 import './Utilities/reset.css';
 
