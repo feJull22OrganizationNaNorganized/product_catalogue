@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./server/dist",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "start": "npm start --prefix server",
+    "build": "swc src -d dist"
   },
   "repository": {
     "type": "git",
@@ -24,9 +25,5 @@
     "react-router": "^6.4.3"
   },
   "engines": {
-    "node": "14.18.2"
-  },
-  "dependencies": {
-    "react-router-dom": "^6.4.3"
-  }
-}
+    "node": "14.16.1"
+  }}

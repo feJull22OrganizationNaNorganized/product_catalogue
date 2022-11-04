@@ -7,4 +7,9 @@ export interface Iphones {
   fullPrice: number,
   price: number,
   screen: string,
+  capacity: string,
+  color: string,
+  year: number,
+  ram: string,
+  image: string,
 }

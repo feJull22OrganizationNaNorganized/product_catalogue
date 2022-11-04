@@ -17,11 +17,40 @@
 }
 
 .header {
+  width: 100%;
   height: var(--header-hight);
+<<<<<<< HEAD:client/src/components/Header/Header.module.scss
   padding-left: 25px;
   padding-right: 25px;
   padding-top: 25px;
 
+=======
+  // display: flex;
+  // align-items: center;
+  // padding-left: 24px;
+  padding-top: 25px;
+
+  .header__left-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__container {
+    display: flex;
+    // align-items: center;
+    
+    justify-content: space-between;
+    align-items: center;
+    // gap: 190px;
+
+    @include onPhone {
+      align-items: flex-start;
+      max-width: 320px;
+      margin: 0;
+    }
+  }
+
+>>>>>>> main:client/src/components/Header/Header.scss
   @include onPhone {
     align-items: flex-start;
     justify-content: space-between;
@@ -100,7 +129,7 @@
 .hand {
   position: absolute;
   left: 50.2%;
-  right: 36.15%;
+  // right: 36.15%;
   top: 0%;
   bottom: 47.91%;
   width: 12px;
