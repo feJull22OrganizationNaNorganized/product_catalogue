@@ -1,17 +1,13 @@
 /*eslint linebreak-style: ["error", "windows"] */
 import React from 'react';
-import {
-  useEffect,
-  useState,
-} from 'react';
+import { useEffect, useState } from 'react';
 import { Home } from './components/Home/Home';
 import { PhonesCatalog } from './components/PhonesCatalog/PhonesCatalog';
 import { Tablets } from './components/Tablets/Tablets';
-import { Layout } from './components/Layout/Layout';
 import { NotFound } from './components/NotFound/NotFound';
 import { Footer } from './components/Footer/Footer';
 
-import { Routes, Route, Link} from 'react-router-dom';
+import { Routes, Route} from 'react-router-dom';
 
 import { Iphones } from './types/Iphones';
 import { getAllProducts } from './api/iphones';
@@ -21,7 +17,11 @@ import './Utilities/normalize.css';
 import './Utilities/reset.css';
 
 
-export const App: React.FC = () =>  {
+import './Utilities/normalize.css';
+import './Utilities/reset.css';
+
+
+export const App: React.FC = () => {
   const [products, setProducts] = useState<Iphones[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [phonesPerPage] = useState(16);
@@ -30,7 +30,7 @@ export const App: React.FC = () =>  {
     try {
       const allIphones = await getAllProducts();
       setProducts(allIphones);
-    } catch(error) {
+    } catch (error) {
       throw new Error('Loading phones from server Error');
     }
   }

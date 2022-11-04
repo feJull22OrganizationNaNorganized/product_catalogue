@@ -21,7 +21,8 @@
   },
   "homepage": "https://github.com/feJull22OrganizationNaNorganized/product_catalog#readme",
   "devDependencies": {
-    "husky": "^8.0.1"
+    "husky": "^8.0.1",
+    "react-router": "^6.4.3"
   },
   "engines": {
     "node": "14.16.1"

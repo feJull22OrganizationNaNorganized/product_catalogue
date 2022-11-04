@@ -10,9 +10,21 @@
   }
 }
 
+@mixin onStandartScreen {
+  @media (min-width: 1200px) and (max-width: 1201px) {
+    @content;
+  }
+}
+
 .header {
   width: 100%;
   height: var(--header-hight);
+<<<<<<< HEAD:client/src/components/Header/Header.module.scss
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 25px;
+
+=======
   // display: flex;
   // align-items: center;
   // padding-left: 24px;
@@ -26,9 +38,10 @@
   &__container {
     display: flex;
     // align-items: center;
-
+    
     justify-content: space-between;
     align-items: center;
+    // gap: 190px;
 
     @include onPhone {
       align-items: flex-start;
@@ -37,9 +50,10 @@
     }
   }
 
+>>>>>>> main:client/src/components/Header/Header.scss
   @include onPhone {
     align-items: flex-start;
-    gap: 210px;
+    justify-content: space-between;
     margin-top: 14px;
     margin-left: 16px;
     align-items: center;
@@ -47,39 +61,65 @@
     
   }
 
-  &__menu {
+  &__container {
     display: flex;
-    gap: 64px;
-    margin-left: 48px;
-    margin-right: 730px;
+    align-items: center;
+    justify-content: space-between;
 
     @include onPhone {
-      display: none;
-    
+      align-items: flex-start;
+      margin: 0;
+      justify-content: space-between;
     }
 
     @include onMokup {
-      margin-right: 120px;
+      gap: 120px;
+    }
+
+    @include onStandartScreen {
+      gap: 520px;
     }
   }
-
 }
 
-.nav__link {
-  position: relative;
-  text-transform: uppercase;
-  color: #89939a;
-  font-family: 'Mont';
-  font-style: normal;
-  font-weight: 800;
-  size: 12px;
-  line-height: 11px;
-  letter-spacing: 0.04em;
-  text-decoration: none;
+.menu__container {
+  margin: 0;
+  display: flex;
+  align-items: center;
 }
 
-.nav__item {
-  list-style-type: none;
+
+.nav {
+  display: flex;
+  gap: 64px;
+  margin-left: 48px;
+
+  @include onPhone {
+    display: none;
+  
+  }
+
+  @include onMokup {
+    margin-left: 32px;
+    gap: 32px;
+  }
+
+  &__link {
+    position: relative;
+    text-transform: uppercase;
+    color: #89939a;
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 800;
+    size: 12px;
+    line-height: 11px;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+  }
+
+  &__item {
+    list-style-type: none;
+  }
 }
 
 .images {
@@ -99,6 +139,14 @@
 .top_img {
   display: flex;
   gap: 50px;
+
+  @include onMokup {
+    gap: 37px;
+  }
+
+  @include onPhone {
+    width: 10px;
+  }
 }
 
 .is-active {
