@@ -44,7 +44,7 @@ export const Pagination: React.FC<Props> = ({
               className={currentPage === number ? 'active-pagination'
 
                 : 'pagination__link'}
-              href="#"
+              href="#/"
               onClick={() => handlePaginate(number)}
             >
               { <p>{number}</p>}
