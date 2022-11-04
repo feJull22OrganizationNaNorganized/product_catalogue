@@ -11,25 +11,48 @@ type Props = {
   nextPage: () => void;
   beforePage: () => void;
   currentPage: number;
+  setPhonesPerPage: (param: number) => void;
 };
 
-export const PhonesCatalog: React.FC<Props> = ({ 
-  currentIphones, 
-  phonesPerPage, 
-  handlePaginate, 
+export const PhonesCatalog: React.FC<Props> = ({
+  currentIphones,
+  phonesPerPage,
+  handlePaginate,
   products,
   nextPage,
   beforePage,
   currentPage,
+  setPhonesPerPage,
 }) => {
   return (
     <section className="phones">
       <div className="container">
         <div className="phones__content">
-          <h1 className="phones__title">Mobile Phones</h1>
+          <div className="phones__container">
+            <h1 className="phones__title">Mobile Phones</h1>
+            <p className='phones__subtitle'>{products.length} models</p>
+            <p className='phones__count-title'>Items on page</p>
+            <select
+              className='select-count'
+              onChange={((event) => setPhonesPerPage(+event?.target.value))}
+            >
+              <option className="select-count__item">
+                4
+              </option>
+              <option className="select-count__item">
+                8
+              </option>
+              <option className="select-count__item">
+                12
+              </option>
+              <option className="select-count__item" selected>
+                16
+              </option>
+            </select>
+          </div>
           <div className="phones__cards">
             <PhonePhages
-              currentIphones={currentIphones} 
+              currentIphones={currentIphones}
               products={products}
               phonesPerPage={phonesPerPage}
               handlePaginate={handlePaginate}
