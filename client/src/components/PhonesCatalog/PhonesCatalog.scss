@@ -12,6 +12,10 @@ ul {
 .phones {
 display: block;
 
+  &__container {
+    margin-left: 35px;
+  }
+
   &__subtitle {
   font-weight: 400;
   line-height: 21px;
@@ -51,6 +55,7 @@ display: block;
     font-weight: 800;
     font-size: 32px;
     margin-bottom: 10px;
+    margin-left: -5px;
 
     @include onTablet {
       font-size: 48px;

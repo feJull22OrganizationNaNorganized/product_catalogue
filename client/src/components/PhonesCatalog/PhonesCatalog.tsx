@@ -28,26 +28,28 @@ export const PhonesCatalog: React.FC<Props> = ({
     <section className="phones">
       <div className="container">
         <div className="phones__content">
-          <h1 className="phones__title">Mobile Phones</h1>
-          <p className='phones__subtitle'>{products.length} models</p>
-          <p className='phones__count-title'>Items on page</p>
-          <select 
-            className='select-count'
-            onChange={((event) => setPhonesPerPage(+event?.target.value))}
-          >
-            <option className="select-count__item">
+          <div className="phones__container">
+            <h1 className="phones__title">Mobile Phones</h1>
+            <p className='phones__subtitle'>{products.length} models</p>
+            <p className='phones__count-title'>Items on page</p>
+            <select
+              className='select-count'
+              onChange={((event) => setPhonesPerPage(+event?.target.value))}
+            >
+              <option className="select-count__item">
                 4
-            </option>
-            <option className="select-count__item">
+              </option>
+              <option className="select-count__item">
                 8
-            </option>
-            <option className="select-count__item">
+              </option>
+              <option className="select-count__item">
                 12
-            </option>
-            <option className="select-count__item" selected>
+              </option>
+              <option className="select-count__item" selected>
                 16
-            </option>
-          </select>
+              </option>
+            </select>
+          </div>
           <div className="phones__cards">
             <PhonePhages
               currentIphones={currentIphones}
