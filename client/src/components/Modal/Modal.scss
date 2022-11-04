@@ -1,0 +1,43 @@
+.modal {
+position: fixed;
+height: 100vh;
+background-color: rgba(0, 0, 0, 0.9);
+width: 100%;
+top: 0;
+left: 0;
+
+  &__container {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+  }
+
+  &__content {
+    background-color: #979A9A;
+    max-width: 800px;
+    min-width: 300px;
+    padding: 30px;
+    position: relative;
+    border-radius: 20px;
+  }
+
+  &__image-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__text {
+    font-size: 30px;
+    color: #fff;
+    color: #000;
+
+    text-transform: uppercase;
+  }
+}
