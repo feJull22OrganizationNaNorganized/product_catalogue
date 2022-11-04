@@ -3,7 +3,6 @@
 import React from 'react';
 import s from './Footer.module.scss';
 import '../../styles/index.scss';
-// import { NavLink } from 'react-router-dom';
 
 export function Footer() {
   return (
