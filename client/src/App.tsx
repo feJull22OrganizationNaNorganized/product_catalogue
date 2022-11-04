@@ -20,7 +20,7 @@ import { Header } from './components/Header/Header';
 export const App: React.FC = () =>  {
   const [products, setProducts] = useState<Iphones[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [phonesPerPage] = useState(16);
+  const [phonesPerPage, setPhonesPerPage] = useState(16);
 
   async function getProductsFromServer() {
     try {
@@ -71,6 +71,7 @@ export const App: React.FC = () =>  {
         {/* <Route path="/home" element={<Navigate to="/" replace />} />  */}
         
         <Route path="product_catalogue" element={<PhonesCatalog 
+          setPhonesPerPage={setPhonesPerPage}
           currentIphones={currentIphones} 
           phonesPerPage={phonesPerPage}
           handlePaginate={handlePaginate}
