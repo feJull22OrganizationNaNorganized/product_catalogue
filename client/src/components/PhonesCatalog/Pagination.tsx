@@ -1,7 +1,5 @@
 import React from 'react';
-import s from './Pagination.scss';
-
-
+import './Pagination.scss';
 
 type Props = {
   phonesPerPage: number;
