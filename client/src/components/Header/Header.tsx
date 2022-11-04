@@ -3,7 +3,15 @@ import React from 'react';
 import { BurgerMenu } from '../BurgerMenu/BurgerMenu';
 import s from './Header.module.scss';
 
-export function Header() {
+export const ROUTER = {
+  home: '/',
+  phones: '/phones',
+  tablets: '/tablets',
+  accessories: '/accessories',
+  cart: '/cart',
+};
+
+export const Header: React.FC = () => {
   return (
     <>
       <div className={s.header} id="header">
@@ -95,4 +103,4 @@ export function Header() {
       <BurgerMenu />
     </>
   );
-}
+};

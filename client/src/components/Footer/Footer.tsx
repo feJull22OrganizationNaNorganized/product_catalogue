@@ -3,6 +3,7 @@
 import React from 'react';
 import s from './Footer.module.scss';
 import '../../styles/index.scss';
+// import { NavLink } from 'react-router-dom';
 
 export function Footer() {
   return (
@@ -26,19 +27,20 @@ export function Footer() {
             </div>
           </div>
           <div className={s.contacts}>
+            {/* <NavLink to="#" className={s.contacts__info}>
+              Github
+            </NavLink>
+            <NavLink to="#" className={s.contacts__info}>
+              Contacts
+            </NavLink>
+            <NavLink to="#" className={s.contacts__info}>
+              Rights
+            </NavLink> */}
             <div className={s.contacts__info}>Github</div>
             <div className={s.contacts__info}>Contacts</div>
             <div className={s.contacts__info}>Rights</div>
           </div>
-          {/* <NavLink to="/Home" className={s.contacts__item}>
-              Github
-            </NavLink>
-            <NavLink to="/Phone" className={s.contacts__item}>
-              Contacts
-            </NavLink>
-            <NavLink to="/Tablets" className={s.contacts_item}>
-              Rights
-            </NavLink> */}
+         
           <div className={s.to_top}>
             <div className={s.top}>Back to top</div>
             <a href="#header">

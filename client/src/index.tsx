@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { App } from './App';
+export * from './components/LinkActive/LinkActive';
 
 
 const root = ReactDOM.createRoot(
