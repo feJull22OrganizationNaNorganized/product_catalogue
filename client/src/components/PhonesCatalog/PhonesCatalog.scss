@@ -12,11 +12,13 @@ ul {
 .phones {
 display: block;
 
-  &__container {
-    margin-left: 35px;
+  &__title {
+    padding-bottom: 8px;
   }
 
   &__subtitle {
+  margin-top: 10px;
+  margin-bottom: 40px;
   font-weight: 400;
   line-height: 21px;
   color: #89939A;
