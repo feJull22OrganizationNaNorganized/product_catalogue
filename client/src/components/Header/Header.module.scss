@@ -18,6 +18,15 @@
 
 .header {
   padding: 25px;
+  background-color: #fff;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 25px;
+  border-bottom: #E2E6E9;
+  box-shadow: -1px 0px 0px #89939A;
+  height: 50px;
+
+  //margin-bottom: 56px;
 
   @include onPhone {
     align-items: flex-start;
@@ -145,6 +154,7 @@
 }
 
 .heart {
+  padding: 0px 20px;
 
   @include onPhone{
     display: none;

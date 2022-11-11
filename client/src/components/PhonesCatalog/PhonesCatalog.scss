@@ -11,6 +11,8 @@ ul {
 
 .phones {
   display: block;
+background: #E2E6E9;
+padding-top: 56px;
   background-color: #FAFBFC;
   padding-top: 40px;
 
@@ -19,7 +21,7 @@ ul {
   }
 
   &__subtitle {
-  margin-top: 10px;
+  padding-top: 10px;
   margin-bottom: 40px;
   font-weight: 400;
   line-height: 21px;
@@ -48,7 +50,7 @@ ul {
 
     @include onDesktop {
       display: grid;
-      gap: 40px 16px;
+      gap: 40px 22px;
       grid-template-columns: repeat(4, 1fr);
       justify-items: center;
     }
@@ -71,11 +73,11 @@ ul {
   background-color: transparent;
   min-width: 176px;
   min-height: 40px;
-  border-color: #89939A;
   margin-bottom: 24px;
   border-radius: 8px;
   color: #89939A;
   padding: 0px 5px;
+  background-color: #D8D8D8;
 
   &__text {
     font-weight: 700;

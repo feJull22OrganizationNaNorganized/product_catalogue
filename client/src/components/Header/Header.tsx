@@ -76,7 +76,7 @@ export function Header() {
                 </a>
               </div>
               <Link to="/">
-                <div className={s.container_img}>
+                <div className={s.container_imgg}>
                   <img
                     className={s.cart}
                     src={require('../../images/Cart.svg')}

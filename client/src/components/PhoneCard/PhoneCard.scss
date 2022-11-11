@@ -3,6 +3,14 @@
   border-radius: 8px;
   margin-bottom: 10px;
   background-color: #fff;
+  transition: all 0.5s;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 0px 1px #89939A;
+  }
+
+  background-color: #fff;
   box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.1);
   transition: transform 0.5s;
 
