@@ -20,8 +20,6 @@
   padding: 15px;
   background-color: #fff;
   border-bottom: #E2E6E9;
-  box-shadow: -1px 0px 0px #89939A;
-  border-bottom: 2px solid #E2E6E9;
 
   @include onPhone {
     align-items: flex-start;
@@ -144,7 +142,7 @@
   display: none;
 
   @include onPhone {
-    display: inline;
+    display: none;
   }
 }
 
