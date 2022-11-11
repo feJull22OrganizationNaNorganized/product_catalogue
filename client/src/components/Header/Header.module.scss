@@ -17,12 +17,7 @@
 }
 
 .header {
-  // width: 100%;
-  height: var(--header-hight);
-  padding-left: 25px;
-  padding-right: 25px;
-  padding-top: 25px;
-  margin-bottom: 56px;
+  padding: 25px;
 
   @include onPhone {
     align-items: flex-start;

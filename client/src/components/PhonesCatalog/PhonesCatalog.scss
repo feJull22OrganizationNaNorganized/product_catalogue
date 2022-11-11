@@ -10,7 +10,9 @@ ul {
 }
 
 .phones {
-display: block;
+  display: block;
+  background-color: #FAFBFC;
+  padding-top: 40px;
 
   &__title {
     padding-bottom: 8px;
@@ -66,7 +68,8 @@ display: block;
 }
 
 .select-count {
-  min-width: 128px;
+  background-color: transparent;
+  min-width: 176px;
   min-height: 40px;
   border-color: #89939A;
   margin-bottom: 24px;
