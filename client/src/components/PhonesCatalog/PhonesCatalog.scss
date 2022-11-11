@@ -11,10 +11,12 @@ ul {
 
 .phones {
   display: block;
-background: #E2E6E9;
-padding-top: 56px;
+  background: #E2E6E9;
+  padding-top: 56px;
   background-color: #FAFBFC;
   padding-top: 40px;
+  border-bottom: 2px solid #E2E6E9;;
+
 
   &__title {
     padding-bottom: 8px;
@@ -77,7 +79,6 @@ padding-top: 56px;
   border-radius: 8px;
   color: #89939A;
   padding: 0px 5px;
-  background-color: #D8D8D8;
 
   &__text {
     font-weight: 700;

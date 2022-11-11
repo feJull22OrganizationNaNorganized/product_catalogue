@@ -17,16 +17,11 @@
 }
 
 .header {
-  padding: 25px;
+  padding: 15px;
   background-color: #fff;
-  padding-left: 25px;
-  padding-right: 25px;
-  padding-top: 25px;
   border-bottom: #E2E6E9;
   box-shadow: -1px 0px 0px #89939A;
-  height: 50px;
-
-  //margin-bottom: 56px;
+  border-bottom: 2px solid #E2E6E9;
 
   @include onPhone {
     align-items: flex-start;
@@ -129,7 +124,7 @@
     &::after {
       content: "";
       position: absolute;
-      bottom: -15px;
+      bottom: -22px;
       left: 0;
       right: 0;
       height: 3px;
@@ -154,7 +149,7 @@
 }
 
 .heart {
-  padding: 0px 20px;
+  padding: 0px 25px;
 
   @include onPhone{
     display: none;
@@ -165,4 +160,44 @@
   @include onPhone {
     display: none;
   }
+}
+
+.container_img {
+  position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -33px;
+      left: 0;
+      width: 2px;
+      height: 76px;
+      background-color: #E2E6E9;
+
+      @include onPhone {
+        display: none;
+      }
+
+      @include onMokup {
+        display: none;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -33px;
+      right: 0;
+      width: 2px;
+      height: 76px;
+      background-color: #E2E6E9;
+
+      @include onMokup {
+        display: none;
+      }
+
+      @include onPhone {
+        display: none;
+      }
+    }
 }
