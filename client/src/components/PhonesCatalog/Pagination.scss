@@ -24,6 +24,7 @@ a {
     border-radius: 50%;
     text-align: center;
     width: 40px;
+    height: 40px;
 
     &:last-child {
       margin-right: 0;
@@ -49,9 +50,16 @@ a {
   border-radius: 50%;
   text-align: center;
   width: 40px;
+  height: 40px;
   background-color:#0F0F11;
 }
 
 .disabled {
   display: none;
+}
+
+p {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
