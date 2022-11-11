@@ -12,14 +12,17 @@
   &__image {
     margin: 0 auto;
     height: 200px;
-    width: 200px;
+    min-width: 160px;
     margin-bottom: 24px;
+    padding: 0px 20px;
   }
 
   &__name {
     color: #0F0F11;
     font-weight: 600;
     font-size: 14px;
+    height: 30px;
+    line-height: 130%;
   }
 
   &__price {
