@@ -15,7 +15,7 @@ export const Home = () => {
       <Swiper
         modules={[Navigation, EffectFade]}
         navigation
-        effect
+        effect={'fade'}
         speed={800}
         slidesPerView={1}
         loop
