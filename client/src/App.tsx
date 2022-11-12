@@ -53,7 +53,7 @@ export const App: React.FC = () => {
 
   return (
     <>
-      <Header />
+      {products.length && (<Header />)}
       <Routes>
         {/* <Route path='/' element={<Layout />}>
           <Route index element={<Home />} />
@@ -92,7 +92,7 @@ export const App: React.FC = () => {
         <Route path='*' element={<NotFound />} />
         <Route index element={<Tablets />} />
       </Routes>
-      <Footer />
+      {products.length && (<Footer />)}
     </>
   );
 };
