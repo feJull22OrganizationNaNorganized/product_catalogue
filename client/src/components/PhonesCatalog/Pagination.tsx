@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Pagination.scss';
 
 type Props = {
@@ -27,7 +28,9 @@ export const Pagination: React.FC<Props> = ({
 
   return (
     <>
-      <ul className='pagination pagination__list'>
+      <ul 
+        className='pagination pagination__list'
+      >
         <img
           className={(currentPage > 1) ? 'pagination__image' : 'disabled'}
 
@@ -37,17 +40,16 @@ export const Pagination: React.FC<Props> = ({
         />
         {PageNumbers.map((number) => (
           (<li key={number}>
-            <a
-
+            <Link 
               className={currentPage === number ? 'active-pagination'
-
                 : 'pagination__link'}
-              href="#/"
+              to="#"
               onClick={() => handlePaginate(number)}
             >
               { <p>{number}</p>}
-            </a>
-          </li>)
+            </Link>
+          </li>
+          )
         ))}
         <img
           className={!(currentPage >= pageCount) ? 'pagination__image' : 'disabled'}
