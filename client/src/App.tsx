@@ -7,7 +7,7 @@ import { Tablets } from './components/Tablets/Tablets';
 import { NotFound } from './components/NotFound/NotFound';
 import { Footer } from './components/Footer/Footer';
 
-import { Routes, Route} from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 import { Iphones } from './types/Iphones';
 import { getAllProducts } from './api/iphones';
@@ -17,6 +17,7 @@ import './Utilities/normalize.css';
 import './Utilities/reset.css';
 import './Utilities/normalize.css';
 import './Utilities/reset.css';
+import { Loader } from './components/Loader/Loader';
 
 
 export const App: React.FC = () => {
@@ -43,11 +44,11 @@ export const App: React.FC = () => {
   const pageCount = products.length / phonesPerPage;
 
   const handlePaginate = (PageNumber: number) => setCurrentPage(PageNumber);
-  const nextPage = () => currentPage < pageCount ? setCurrentPage(prev => prev + 1) 
+  const nextPage = () => currentPage < pageCount ? setCurrentPage(prev => prev + 1)
     : setCurrentPage(prev => prev);
-  const beforePage = () => currentPage > 1 ? setCurrentPage(prev => prev - 1) 
+  const beforePage = () => currentPage > 1 ? setCurrentPage(prev => prev - 1)
     : setCurrentPage(prev => prev);
-  
+
   console.log(location);
 
   return (
@@ -69,25 +70,27 @@ export const App: React.FC = () => {
           <Route path='*' element={<NotFound />} />
         </Route> */}
 
-        <Route index element={<Home/>} />
+        <Route index element={<Home />} />
         {/* <Route path="/home" element={<Navigate to="/" replace />} />  */}
-        
-        <Route path="product_catalogue" element={<PhonesCatalog 
-          setPhonesPerPage={setPhonesPerPage}
-          currentIphones={currentIphones} 
-          phonesPerPage={phonesPerPage}
-          handlePaginate={handlePaginate}
-          products={products}
-          nextPage={nextPage}
-          beforePage={beforePage}
-          currentPage={currentPage}/>} /> 
-     
-        <Route path="/menu" element={< NotFound/>} />
+
+        <Route path="product_catalogue" element={products.length ? (
+          <PhonesCatalog
+            setPhonesPerPage={setPhonesPerPage}
+            currentIphones={currentIphones}
+            phonesPerPage={phonesPerPage}
+            handlePaginate={handlePaginate}
+            products={products}
+            nextPage={nextPage}
+            beforePage={beforePage}
+            currentPage={currentPage} />
+        ) : (<Loader />)} />
+
+        <Route path="/menu" element={< NotFound />} />
         <Route path="/favorites" element={<NotFound />} />
         <Route path="/cart" element={<NotFound />} />
-        <Route index element={<Tablets/>}/>
+        <Route index element={<Tablets />} />
         <Route path='*' element={<NotFound />} />
-        <Route index element={<Tablets/>}/>
+        <Route index element={<Tablets />} />
       </Routes>
       <Footer />
     </>

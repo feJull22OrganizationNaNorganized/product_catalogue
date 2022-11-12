@@ -1,0 +1,24 @@
+.loader {
+  min-height: 100vh;
+  margin-bottom: -100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__image {
+    animation-name: lds-ring;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+  }
+
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
