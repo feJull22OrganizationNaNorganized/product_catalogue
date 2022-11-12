@@ -19,7 +19,7 @@
 .header {
   padding: 15px;
   background-color: #fff;
-  border-bottom: #E2E6E9;
+  border-bottom: 2px solid #E2E6E9;
 
   @include onPhone {
     align-items: flex-start;
