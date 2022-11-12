@@ -29,11 +29,13 @@
     align-items: center;
     padding: 0;
     margin-bottom: 25px;
+    border-bottom: transparent;
   }
 
   @include onMokup {
     margin-bottom: 50px;
     padding-right: 22px;
+    border-bottom: transparent;
   }
 
   &__container {
