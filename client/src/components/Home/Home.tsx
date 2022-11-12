@@ -10,7 +10,7 @@ import 'swiper/css/navigation';
 export const Home = () => {
 
   return (
-    <div className="">
+    <div className="swiper">
       <h2 className='home-title'>Welcome to Nice Gadgets store!</h2>
       <Swiper
         modules={[Navigation, EffectFade]}
