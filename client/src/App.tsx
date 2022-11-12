@@ -53,7 +53,7 @@ export const App: React.FC = () => {
 
   return (
     <>
-      {products.length && (<Header />)}
+      {products.length > 0 && (<Header />)}
       <Routes>
         {/* <Route path='/' element={<Layout />}>
           <Route index element={<Home />} />
