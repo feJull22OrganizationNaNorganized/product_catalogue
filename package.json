@@ -26,4 +26,8 @@
   },
   "engines": {
     "node": "14.16.1"
-  }}
+  },
+  "dependencies": {
+    "swiper": "^8.4.4"
+  }
+}
