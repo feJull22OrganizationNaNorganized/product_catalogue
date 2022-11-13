@@ -23,6 +23,9 @@ export const App: React.FC = () => {
   const [products, setProducts] = useState<Iphones[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [phonesPerPage, setPhonesPerPage] = useState(16);
+  const [orderCart, setOrderCart] = useState<Iphones[]>([]);
+
+  console.log(orderCart);
 
   async function getProductsFromServer() {
     try {
@@ -81,12 +84,14 @@ export const App: React.FC = () => {
             products={products}
             nextPage={nextPage}
             beforePage={beforePage}
-            currentPage={currentPage} />
+            currentPage={currentPage}
+            setOrderCart={setOrderCart}
+          />
         ) : (<Loader />)} />
 
         <Route path="/menu" element={< NotFound />} />
         <Route path="/favorites" element={<NotFound />} />
-        <Route path="/cart" element={<Cart />} />
+        <Route path="/cart" element={<Cart orderCart={orderCart} />} />
         <Route index element={<Tablets />} />
         <Route path='*' element={<NotFound />} />
         <Route index element={<Tablets />} />

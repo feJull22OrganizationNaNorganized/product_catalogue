@@ -1,21 +1,22 @@
-import React from 'react';
+import React, { Dispatch, SetStateAction } from 'react';
 import { useState } from 'react';
 import { Iphones } from '../../types/Iphones';
 import './PhoneCard.scss';
 
 type Props = {
   phone: Iphones;
+  setOrderCart:React.Dispatch<React.SetStateAction<Iphones[]>>;
 }
 // import iphone from '../../images/iphone.png';
 
-export const PhoneCard: React.FC<Props> = ({ phone }) => {
+export const PhoneCard: React.FC<Props> = ({ phone, setOrderCart }) => {
   const [buttonText, setButtonText] = useState('Add to cart');
   const [flag, setFlag] = useState(false);
 
-  const handleClick = () => {
+  const handleClick = (item: Iphones) => {
     setButtonText('Added to cart');
     setFlag(true);
-    
+    setOrderCart((prev) => [...prev, item]);
   };
 
   return (
@@ -48,7 +49,7 @@ export const PhoneCard: React.FC<Props> = ({ phone }) => {
           </div>
         </div>
         <div className="card__buttons">
-          <button className={flag ? 'card__cart-active' : 'card__cart'} onClick={handleClick}>
+          <button className={flag ? 'card__cart-active' : 'card__cart'} onClick={() => handleClick(phone)}>
             {buttonText}
           </button>
           <a href="/" className="card__link">

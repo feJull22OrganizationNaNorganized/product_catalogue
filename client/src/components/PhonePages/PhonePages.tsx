@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Dispatch, SetStateAction, useState } from 'react';
 import { Iphones } from '../../types/Iphones';
 import { PhoneCard } from '../PhoneCard/PhoneCard';
 import { Pagination } from '../PhonesCatalog/Pagination';
@@ -12,6 +12,7 @@ type Props = {
   nextPage: () => void;
   beforePage:() => void;
   currentPage: number;
+  setOrderCart: Dispatch<SetStateAction<Iphones[]>>
 }
 
 export const PhonePhages: React.FC<Props> = ({ 
@@ -22,13 +23,20 @@ export const PhonePhages: React.FC<Props> = ({
   nextPage,
   beforePage,
   currentPage,
+  setOrderCart,
 }) => {
+  //const [orderCart, setOrderCart] = useState<Iphones[]>([]);
+
+  //console.log(orderCart);
   return (
     <div>
       <ul className="phones__cards">
         {currentIphones.map((item) => (
           <li className="phones__item" key={item.id}>
-            <PhoneCard phone={item} />
+            <PhoneCard 
+              phone={item}
+              setOrderCart={setOrderCart}
+            />
           </li>
         ))}
       </ul >

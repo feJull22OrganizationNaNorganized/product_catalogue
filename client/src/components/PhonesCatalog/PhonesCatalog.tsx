@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Dispatch, SetStateAction } from 'react';
 import './PhonesCatalog.scss';
 import { PhonePhages } from '../../components/PhonePages/PhonePages';
 import { Iphones } from '../../types/Iphones';
@@ -12,6 +12,7 @@ type Props = {
   beforePage: () => void;
   currentPage: number;
   setPhonesPerPage: (param: number) => void;
+  setOrderCart:Dispatch<SetStateAction<Iphones[]>>
 };
 
 export const PhonesCatalog: React.FC<Props> = ({
@@ -23,6 +24,7 @@ export const PhonesCatalog: React.FC<Props> = ({
   beforePage,
   currentPage,
   setPhonesPerPage,
+  setOrderCart,
 }) => {
   return (
     <section className="phones">
@@ -59,6 +61,8 @@ export const PhonesCatalog: React.FC<Props> = ({
               nextPage={nextPage}
               beforePage={beforePage}
               currentPage={currentPage}
+              setOrderCart={setOrderCart}
+              
             />
           </div>
         </div>
