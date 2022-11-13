@@ -1,68 +1,62 @@
-import React, { useCallback } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { Iphones } from '../../types/Iphones';
+import './Cart.scss';
 
-type Props = {
-  cartItem: Iphones;
-  updateCart: (item: Iphones, newCount: number) => void;
-}
-
-export const Cart: React.FC<Props> = ({ cartItem, updateCart }) => {
-  const {
-    name,
-    price,
-  } = cartItem;
-
-  let count = 0;
-  // let { count = 1 } = cartItem;
-
-  const handleAddButton = useCallback(() => {
-    count++;
-    updateCart(cartItem, count);
-  }, []);
-
-  const handleMinusButton = useCallback(() => {
-    count--;
-    updateCart(cartItem, count);
-  }, []);
-
-  const handleRemoveButton = useCallback(() => {
-    updateCart(cartItem, count);
-  }, []);
+export const Cart: React.FC = () => {
   return (
-    <li >
-      <button
-        
-        onClick={handleRemoveButton}
-      >
+    <div  className='cart__content'>
+      <Link to="/product_catalogue">
+        <a href="">
+          <img
+            src={require('./images/arrow.png')}
+            alt="back arrow"
+            className="arrow"
+          />
+        </a>
 
-      </button>
-      <div >
-        <img
-          
-          alt="iphone"
-        />
+        <p className="back_item">Back</p>
+      </Link>
+      <p className="cart_item">Cart</p>
+
+      <div className='structure'>
+        <div className="cartCard">
+          <div className="cartCard__phone">
+            <a href="" className="remove">
+              {' '}
+              <img src={require('./images/close.png')} alt="" />{' '}
+            </a>
+            <img
+              src={require('./images/image 8.png')}
+              alt=""
+              className="phoneImg"
+            />
+            <p className="phoneText">
+              Apple iPhone 14 Pro 128GB Silver (MQ023)
+            </p>
+          </div>
+          <div className="cartCard__coastAndCount">
+            <a href="" className="minus"></a>
+            <p className="countNumber">1</p>
+            <a href="" className="plus"></a>
+            <p className="phonePrice">$999</p>
+          </div>
+        </div>
+
+        <div className="buttomCard">
+          <div className="buttomCard__totalPrice">
+            <p className="totalPrice">$2345</p>
+            <p className="totalItems">Total for 3 items</p>
+          </div>
+          <div>
+            <hr className="line" />
+          </div>
+          <div className="buttonContainer">
+            <button className="buttonCheckout">Checkout</button>
+          </div>
+        </div>
       </div>
-      <h3>
-        {name} (MQ023)
-      </h3>
-      <div >
-        <button
-         
-          onClick={handleMinusButton}
-        >
+    </div>
 
-        </button>
-        <span >{count}</span>
-        <button
-         
-          onClick={handleAddButton}
-        >
-
-        </button>
-      </div>
-      <span >
-        {`$${price}`}
-      </span>
-    </li>
   );
 };

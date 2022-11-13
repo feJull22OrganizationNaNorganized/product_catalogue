@@ -1,0 +1,543 @@
+@import './mixin.scss';
+
+.cart__content {
+  margin: 50px;
+}
+.arrow {
+  cursor: pointer;
+  @include onPhone {
+    display: inline;
+    margin-left: 21px;
+    margin-bottom: 27px;
+  }
+
+  @include onMokup {
+    display: inline;
+    margin-left: 29px;
+    margin-bottom: 19px;
+  }
+
+  @include onDesctop {
+    display: inline;
+    margin-left: 37px;
+    margin-bottom: 19px;
+  }
+}
+
+.back_item {
+  cursor: pointer;
+  @include onPhone {
+    display: inline;
+    position: relative;
+    left: 13px;
+    bottom: 27px;
+    color: #89939a;
+  }
+
+  @include onMokup {
+    display: inline;
+    position: relative;
+    left: 10px;
+    bottom: 19px;
+  }
+
+  @include onDesctop {
+    display: inline;
+    position: relative;
+    left: 10px;
+    bottom: 19px;
+  }
+}
+
+.cart_item {
+  margin: 20px;
+  @include onPhone {
+    margin-left: 16px;
+    margin-bottom: 32px;
+    font-weight: 800;
+    font-size: 32px;
+  }
+
+  @include onMokup {
+    margin-left: 24px;
+    font-weight: 800;
+    font-size: 48px;
+  }
+
+  @include onDesctop {
+    margin-left: 24px;
+    font-weight: 800;
+    font-size: 48px;
+  }
+}
+
+.structure {
+  @include onPhone {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include onMokup {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include onDesctop {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.cartCard {
+  @include onPhone {
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-bottom: 32px;
+    width: 93%;
+    height: 160px;
+    border: 1px solid #e2e6e9;
+    border-radius: 8px;
+    color: black;
+  }
+
+  @include onMokup {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-bottom: 32px;
+    width: 95%;
+    height: 128px;
+    border: 1px solid #e2e6e9;
+    border-radius: 16px;
+  }
+
+  @include onDesctop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-bottom: 32px;
+    width: 70%;
+    height: 128px;
+    border: 1px solid #e2e6e9;
+    border-radius: 16px;
+  }
+
+  &__phone {
+    @include onPhone {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: 55%;
+    }
+
+    @include onMokup {
+      display: flex;
+      flex-direction: row;
+      width: 65%;
+      height: 50%;
+    }
+
+    @include onDesctop {
+      display: flex;
+      flex-direction: row;
+      width: 65%;
+      height: 50%;
+    }
+  }
+
+  &__coastAndCount {
+    @include onPhone {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: 100%;
+    }
+
+    @include onMokup {
+      display: flex;
+      flex-direction: row;
+      width: 35%;
+      height: 100%;
+    }
+
+    @include onDesctop {
+      display: flex;
+      flex-direction: row;
+      width: 35%;
+      height: 100%;
+    }
+  }
+}
+
+.remove {
+  @include onPhone {
+    position: relative;
+    left: 19px;
+    top: 40px;
+  }
+
+  @include onMokup {
+    position: relative;
+    left: 27px;
+    top: 59px;
+  }
+
+  @include onDesctop {
+    position: relative;
+    left: 27px;
+    top: 59px;
+  }
+}
+
+.phoneImg {
+  @include onPhone {
+    width: 66px;
+    height: 66px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 20%;
+  }
+
+  @include onMokup {
+    width: 66px;
+    height: 66px;
+    padding-top: 31px;
+    padding-bottom: 31px;
+    padding-left: 20%;
+  }
+
+  @include onDesctop {
+    width: 66px;
+    height: 66px;
+    padding-top: 31px;
+    padding-bottom: 31px;
+    padding-left: 20%;
+  }
+}
+
+.phoneText {
+  @include onPhone {
+    margin-left: 20%;
+    margin-top: 7px;
+    width: 128px;
+    height: 63px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+  }
+
+  @include onMokup {
+    margin-left: 20%;
+    margin-top: 43px;
+    width: 176px;
+    height: 42px;
+  }
+
+  @include onDesctop {
+    margin-left: 20%;
+    margin-top: 43px;
+    width: 176px;
+    height: 42px;
+  }
+}
+
+.countNumber {
+  @include onPhone {
+    margin-left: 1%;
+    margin-top: 30px;
+    font-size: 27px;
+    font-weight: 300;
+    line-height: 21px;
+  }
+
+  @include onMokup {
+    margin-top: 48px;
+    font-size: 25px;
+  }
+
+  @include onDesctop {
+    margin-top: 48px;
+    font-size: 25px;
+  }
+}
+
+.phonePrice {
+  @include onPhone {
+    margin-top: 23px;
+    margin-left: 155px;
+    margin-right: 5%;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 30px;
+  }
+
+  @include onMokup {
+    margin-top: 48px;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 31px;
+  }
+
+  @include onDesctop {
+    margin-top: 48px;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 31px;
+  }
+}
+
+.minus {
+  @include onPhone {
+    margin: auto;
+    border: 1px solid grey;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-image: url('./images/minus.png');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @include onMokup {
+    margin: auto;
+    border: 1px solid grey;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-image: url('./images/minus.png');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @include onDesctop {
+    margin: auto;
+    border: 1px solid grey;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-image: url('./images/minus.png');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.plus {
+  @include onPhone {
+    border: 1px solid grey;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin: auto;
+    text-align: center;
+    background-image: url('./images/Plus.png');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @include onMokup {
+    border: 1px solid grey;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin: auto;
+    text-align: center;
+    background-image: url('./images/Plus.png');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @include onDesctop {
+    border: 1px solid grey;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin: auto;
+    text-align: center;
+    background-image: url('./images/Plus.png');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.buttomCard {
+  @include onPhone {
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+    margin-right: 12px;
+    width: 94%;
+    height: 190px;
+    border: 1px solid #e2e6e9;
+    border-radius: 8px;
+    color: black;
+  }
+
+  @include onMokup {
+    display: flex;
+    flex-direction: column;
+    margin-left: 24px;
+    margin-right: 24px;
+    width: 95%;
+    height: 190px;
+    border: 1px solid #e2e6e9;
+    border-radius: 8px;
+    color: black;
+  }
+
+  @include onDesctop {
+    display: flex;
+    flex-direction: column;
+    margin-left: 24px;
+    margin-right: 24px;
+    width: 30%;
+    height: 190px;
+    border: 1px solid #e2e6e9;
+    border-radius: 8px;
+    color: black;
+  }
+
+  &__totalPrice {
+    @include onPhone {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @include onMokup {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @include onDesctop {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+.totalPrice {
+  @include onPhone {
+    margin: auto;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 41px;
+  }
+
+  @include onMokup {
+    margin: auto;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 41px;
+  }
+
+  @include onDesctop {
+    margin: auto;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 41px;
+  }
+}
+
+.totalItems {
+  @include onPhone {
+    margin: auto;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+    color: #89939A;
+  }
+
+  @include onMokup {
+    margin: auto;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+    color: #89939A;
+  }
+
+  @include onDesctop {
+    margin: auto;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+    color: #89939A;
+  }
+}
+
+.line {
+  @include onPhone {
+    width: 87%;
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+
+  @include onMokup {
+    width: 92%;
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+
+  @include onDesctop {
+    width: 92%;
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+}
+
+.buttonContainer {
+  @include onPhone {
+    margin: auto;
+  }
+
+  @include onMokup {
+    margin: auto;
+  }
+
+  @include onDesctop {
+    margin: auto;
+  }
+}
+
+.buttonCheckout {
+  @include onPhone {
+    width: 240px;
+    height: 48px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    border-radius: 8px;
+    background-color: #216CFF;
+    color: white;
+  }
+
+  @include onMokup {
+    width: 544px;
+    height: 48px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    border-radius: 8px;
+    background-color: #216CFF;
+    color: white;
+  }
+
+  @include onDesctop {
+    width: 320px;
+    height: 48px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    border-radius: 8px;
+    background-color: #216CFF;
+    color: white;
+  }
+}

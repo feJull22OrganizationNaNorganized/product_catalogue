@@ -6,12 +6,11 @@ import { PhonesCatalog } from './components/PhonesCatalog/PhonesCatalog';
 import { Tablets } from './components/Tablets/Tablets';
 import { NotFound } from './components/NotFound/NotFound';
 import { Footer } from './components/Footer/Footer';
-
 import { Routes, Route } from 'react-router-dom';
-
 import { Iphones } from './types/Iphones';
 import { getAllProducts } from './api/iphones';
 import { Header } from './components/Header/Header';
+import { Cart } from './components/Cart/Cart';
 
 import './Utilities/normalize.css';
 import './Utilities/reset.css';
@@ -87,7 +86,7 @@ export const App: React.FC = () => {
 
         <Route path="/menu" element={< NotFound />} />
         <Route path="/favorites" element={<NotFound />} />
-        <Route path="/cart" element={<NotFound />} />
+        <Route path="/cart" element={<Cart />} />
         <Route index element={<Tablets />} />
         <Route path='*' element={<NotFound />} />
         <Route index element={<Tablets />} />
