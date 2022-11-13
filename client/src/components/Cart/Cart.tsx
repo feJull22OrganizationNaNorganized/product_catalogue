@@ -49,7 +49,6 @@ export const Cart: React.FC = () => {
             <p className="totalItems">Total for 3 items</p>
           </div>
           <div>
-            <hr className="line" />
           </div>
           <div className="buttonContainer">
             <button className="buttonCheckout">Checkout</button>
