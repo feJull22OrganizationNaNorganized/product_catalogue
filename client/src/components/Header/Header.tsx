@@ -65,17 +65,15 @@ export function Header() {
                     />
                   </div>
                 </a>
-                <a href="">
-                  <div className={s.container_imgg}>
-                    <Link to="/cart">
-                      <img
-                        className={s.bucket}
-                        src={require('../../images/bucket.png')}
-                        alt="bucket"
-                      />
-                    </Link>
-                  </div>
-                </a>
+                <div className={s.container_imgg}>
+                  <Link to="/cart">
+                    <img
+                      className={s.bucket}
+                      src={require('../../images/bucket.png')}
+                      alt="bucket"
+                    />
+                  </Link>
+                </div>
               </div>
               <Link to="/">
                 <div className={s.container_imgg}>
