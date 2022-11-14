@@ -40,6 +40,8 @@ export const App: React.FC = () => {
     getProductsFromServer();
   }, []);
 
+
+
   const lastIphonesIndex = currentPage * phonesPerPage;
   const firstIphonesIndex = lastIphonesIndex - phonesPerPage;
   const currentIphones = products.slice(firstIphonesIndex, lastIphonesIndex);

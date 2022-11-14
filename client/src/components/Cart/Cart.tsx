@@ -10,6 +10,7 @@ type Props = {
 
 export const Cart: React.FC<Props> = ({ orderCart }) => {
   console.log(orderCart);
+ 
   return (
     <div className='cart__content'>
       <Link to="/product_catalogue">
@@ -21,14 +22,29 @@ export const Cart: React.FC<Props> = ({ orderCart }) => {
           />
         </a>
 
-        <p className="back_item">Back</p>
+        <p className="back_item" style={{color: '#000'}}>Back</p>
       </Link>
       <p className="cart_item">Cart</p>
-      {orderCart.map((item) => (
-        <li key={item.id}>
-          <CartItem items={item} />
-        </li>
-      ))}
+      <div className="cart__box">
+        {orderCart.map((item) => (
+          <li key={item.id} className='cart__list'>
+            <CartItem items={item} />
+          </li>
+        ))}
+
+        {orderCart.length > 0 && ( <div className="buttomCard">
+          <div className="buttomCard__totalPrice">
+            <p className="totalPrice">2000$</p>
+            <p className="totalItems">Total for {orderCart.length} items</p>
+          </div>
+          <div>
+          </div>
+          <div className="buttonContainer">
+            <button className="buttonCheckout">Checkout</button>
+          </div>
+        </div>)}
+
+      </div>
 
     </div>
 

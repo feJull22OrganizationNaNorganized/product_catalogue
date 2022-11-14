@@ -83,8 +83,8 @@
   }
 
   @include onDesctop {
-    display: flex;
-    flex-direction: row;
+    //display: flex;
+    //flex-direction: row;
   }
 }
 
@@ -92,10 +92,10 @@
   @include onPhone {
     display: flex;
     flex-direction: column;
-    margin-left: 16px;
-    margin-right: 16px;
+    //margin-left: 16px;
+    //margin-right: 16px;
     margin-bottom: 32px;
-    width: 93%;
+    width: 100%;
     height: 160px;
     border: 1px solid #e2e6e9;
     border-radius: 8px;
@@ -117,13 +117,12 @@
 
   @include onDesctop {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     margin-left: 24px;
     margin-right: 24px;
     margin-bottom: 32px;
     width: 70%;
-    height: 128px;
+    //height: 128px;
     border: 1px solid #e2e6e9;
     border-radius: 16px;
   }
@@ -222,6 +221,7 @@
 }
 
 .phoneText {
+  min-width: 100%;
   @include onPhone {
     margin-left: 20%;
     margin-top: 7px;
@@ -370,12 +370,13 @@
 }
 
 .buttomCard {
+  min-width: 100%;
   @include onPhone {
     display: flex;
     flex-direction: column;
     margin-left: 12px;
     margin-right: 12px;
-    width: 94%;
+    width: 100%;
     height: 190px;
     border: 1px solid #e2e6e9;
     border-radius: 8px;
@@ -509,18 +510,18 @@
 
 .buttonCheckout {
   @include onPhone {
-    width: 240px;
+    max-width: 240px;
+    padding: 0 20px;
     height: 48px;
     font-size: 14px;
     font-weight: 700;
-    line-height: 21px;
     border-radius: 8px;
     background-color: #216CFF;
     color: white;
   }
 
   @include onMokup {
-    width: 544px;
+    width: 444px;
     height: 48px;
     font-size: 14px;
     font-weight: 700;
@@ -539,5 +540,32 @@
     border-radius: 8px;
     background-color: #216CFF;
     color: white;
+  }
+}
+
+li {
+  list-style:none;
+}
+
+.cart__list {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  @include onPhone {
+    width: 280px;
+    //padding: 0 20px;
+  }
+
+  @include onMokup {
+    width: 620px;
+  }
+}
+
+.phoneText {
+  position: relative;
+  top: 35px;
+
+  @include onPhone {
+    font-size: 12px;
   }
 }

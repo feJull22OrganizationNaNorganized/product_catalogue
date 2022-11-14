@@ -28,12 +28,10 @@
     margin-left: 16px;
     align-items: center;
     padding: 0;
-    margin-bottom: 25px;
-    border-bottom: transparent;
+    //border-bottom: transparent;
   }
 
   @include onMokup {
-    margin-bottom: 50px;
     padding-right: 22px;
   }
 
