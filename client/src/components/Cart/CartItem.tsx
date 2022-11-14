@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Iphones } from '../../types/Iphones';
 import './cartItem.scss';
 
@@ -6,19 +6,12 @@ type Props = {
   items: Iphones;
 }
 export const CartItem: React.FC<Props> = ({ items }) => {
-  //useEffect(() => {
-  //  localStorage.setItem('items', JSON.stringify(items));
-  //}, [items]);
-
-  //useEffect(() => {
-  //  const items = JSON.parse(localStorage.getItem('items'));
-  //  if (items) {
-  //    setItems(items);
-  //  }
-  //}, []);
   return (
-    <div className="cartCard"  style={{padding: '0 20px'}}>
-      <a href="" className="remove">
+    <div className="cartCard" style={{ padding: '0 20px' }}>
+      <a
+        href=""
+        className="remove"
+      >
         {' '}
         <img src={require('./images/close.png')} alt="" />{' '}
       </a>

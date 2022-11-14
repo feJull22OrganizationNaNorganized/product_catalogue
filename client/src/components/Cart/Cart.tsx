@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Dispatch, SetStateAction, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Iphones } from '../../types/Iphones';
 import './Cart.scss';
@@ -6,11 +6,10 @@ import { CartItem } from './CartItem';
 
 type Props = {
   orderCart: Iphones[];
+  setOrderCart: Dispatch<SetStateAction<Iphones[]>>;
 }
 
-export const Cart: React.FC<Props> = ({ orderCart }) => {
-  console.log(orderCart);
- 
+export const Cart: React.FC<Props> = ({ orderCart, setOrderCart}) => {
   return (
     <div className='cart__content'>
       <Link to="/product_catalogue">
@@ -21,17 +20,17 @@ export const Cart: React.FC<Props> = ({ orderCart }) => {
             className="arrow"
           />
         </a>
-
         <p className="back_item" style={{color: '#000'}}>Back</p>
       </Link>
       <p className="cart_item">Cart</p>
       <div className="cart__box">
         {orderCart.map((item) => (
           <li key={item.id} className='cart__list'>
-            <CartItem items={item} />
+            <CartItem 
+              items={item} 
+            />
           </li>
         ))}
-
         {orderCart.length > 0 && ( <div className="buttomCard">
           <div className="buttomCard__totalPrice">
             <p className="totalPrice">2000$</p>
@@ -43,9 +42,7 @@ export const Cart: React.FC<Props> = ({ orderCart }) => {
             <button className="buttonCheckout">Checkout</button>
           </div>
         </div>)}
-
       </div>
-
     </div>
 
   );

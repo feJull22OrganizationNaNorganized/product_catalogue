@@ -2,6 +2,7 @@
 
 .cart__content {
   margin: 50px;
+  min-height: 70vh;
 }
 .arrow {
   cursor: pointer;
@@ -177,8 +178,7 @@
 .remove {
   @include onPhone {
     position: relative;
-    left: 19px;
-    top: 40px;
+    top: 10px;
   }
 
   @include onMokup {
@@ -553,7 +553,8 @@ li {
   align-items: center;
   @include onPhone {
     width: 280px;
-    //padding: 0 20px;
+    position: relative;
+    left: 50%;transform: translateX(-50%);
   }
 
   @include onMokup {

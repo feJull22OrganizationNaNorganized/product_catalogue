@@ -59,24 +59,7 @@ export const App: React.FC = () => {
     <>
       {products.length > 0 && (<Header />)}
       <Routes>
-        {/* <Route path='/' element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path='product_catalogue' element={<PhonesCatalog 
-            currentIphones={currentIphones} 
-            phonesPerPage={phonesPerPage}
-            handlePaginate={handlePaginate}
-            products={products}
-            nextPage={nextPage}
-            beforePage={beforePage}
-            currentPage={currentPage}
-          />} />
-          <Route index element={<Tablets/>}/>
-          <Route path='*' element={<NotFound />} />
-        </Route> */}
-
         <Route index element={<Home />} />
-        {/* <Route path="/home" element={<Navigate to="/" replace />} />  */}
-
         <Route path="product_catalogue" element={products.length ? (
           <PhonesCatalog
             setPhonesPerPage={setPhonesPerPage}
@@ -93,7 +76,10 @@ export const App: React.FC = () => {
 
         <Route path="/menu" element={< NotFound />} />
         <Route path="/favorites" element={<NotFound />} />
-        <Route path="/cart" element={<Cart orderCart={orderCart} />} />
+        <Route path="/cart" element={<Cart 
+          orderCart={orderCart} 
+          setOrderCart={setOrderCart}
+        />} />
         <Route index element={<Tablets />} />
         <Route path='*' element={<NotFound />} />
         <Route index element={<Tablets />} />
