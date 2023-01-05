@@ -2,7 +2,7 @@
 
 import axios from 'axios';
 
-axios.defaults.baseURL = 'https://fe-jul-catalog-server.herokuapp.com/';
+axios.defaults.baseURL = 'https://product-catalog-back.onrender.com/';
 
 export function getAllProducts() {
   return axios.get('/phones')

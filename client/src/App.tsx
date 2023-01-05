@@ -57,7 +57,7 @@ export const App: React.FC = () => {
 
   return (
     <>
-      {products.length > 0 && (<Header />)}
+      {products.length && (<Header />)}
       <Routes>
         <Route index element={<Home />} />
         <Route path="product_catalogue" element={products.length ? (
