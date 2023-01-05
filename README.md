@@ -2,7 +2,7 @@
 
 
 
-Server on Heroku..
+Server was deployed on render.
 
 
 technologies stack: Node.js, React.JS, HTML + SASS(SCSS);
