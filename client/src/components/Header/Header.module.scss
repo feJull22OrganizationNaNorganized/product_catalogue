@@ -59,10 +59,10 @@
   gap: 64px;
   margin-left: 48px;
 
-  @include onPhone {
-    display: none;
+  //@include onPhone {
+  //  display: none;
   
-  }
+  //}
 
   @include onMokup {
     margin-left: 32px;
@@ -147,9 +147,9 @@
 .heart {
   //padding: 0px 25px;
 
-  @include onPhone{
-    display: none;
-  }
+  //@include onPhone{
+  //  display: none;
+  //}
 }
 
 .bucket {
