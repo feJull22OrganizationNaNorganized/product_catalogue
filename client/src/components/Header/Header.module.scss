@@ -60,7 +60,7 @@
   margin-left: 48px;
 
   @include onPhone {
-    gap: 0px;
+    display: none;
   
   }
 
@@ -155,7 +155,7 @@
 .bucket {
   
   @include onPhone {
-    //display: none;
+    display: none;
   }
 }
 
