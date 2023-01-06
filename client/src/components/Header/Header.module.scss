@@ -1,22 +1,25 @@
 @mixin onMokup {
-  @media (min-width: 640px) and (max-width: 1199px) {
+  @media (min-width: 640px) {
     @content;
   }
 }
 
 @mixin onPhone {
-  @media (min-width: 320px) and (max-width: 639px) {
+  @media (min-width: 320px){
     @content;
   }
 }
 
 @mixin onStandartScreen {
-  @media (min-width: 1200px) and (max-width: 1201px) {
+  @media (min-width: 1200px) {
     @content;
   }
 }
 
 .header {
+  @include onMokup() {
+    //display: none;
+  }
   padding: 15px;
   background-color: #fff;
   border-bottom: 2px solid #E2E6E9;
@@ -61,10 +64,12 @@
 
   @include onPhone {
     display: none;
-  
   }
 
   @include onMokup {
+    display: flex;
+    gap: 64px;
+    margin-left: 48px;
     margin-left: 32px;
     gap: 32px;
   }
@@ -137,25 +142,35 @@
 }
 
 .cart {
-  display: none;
+  //display: none;
 
   @include onPhone {
     display: none;
   }
+
+
 }
 
 .heart {
   //padding: 0px 25px;
 
-  //@include onPhone{
-  //  display: none;
-  //}
+  @include onPhone{
+    display: none;
+  }
+
+  @include onMokup {
+    display: inline;
+  }
 }
 
 .bucket {
-  
+  display: inline;
   @include onPhone {
     display: none;
+  }
+
+  @include onMokup {
+    display: inline;
   }
 }
 
@@ -189,4 +204,24 @@
         display: none;
       }
     }
+}
+
+.burger {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  text-align: right;
+  background-color: #fff;
+
+  @include onMokup {
+    display: none;
+  }
+  @include onStandartScreen {
+    display: none;
+  }
+  &_image {
+    padding: 20px;
+    width: 20px;
+    height: 20px;
+  }
 }

@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import s from './Header.module.scss';
 import { Link } from 'react-router-dom';
 import { PageNavLink } from '../PageNavLink/PageNavLink';
 import { BurgerMenu } from '../BurgerMenu/BurgerMenu';
 
 export function Header() {
+  const [open, setOpen] = useState(false);
+
+  const handleChangeOpen = () => {
+    setOpen(prev => !prev);
+    console.log(open);
+  };
   return (
     <>
       <div className={s.header} id="header">
@@ -87,7 +93,17 @@ export function Header() {
           </div>
         </div>
       </div>
-      <BurgerMenu />
+      <div className={s.burger}> 
+        <img 
+          src={require('../../images/cart.png')} 
+          alt="burger" 
+          className={s.burger}
+          onClick={() => handleChangeOpen()}
+        />
+      </div>
+
+      {open && (<BurgerMenu handleChangeOpen={handleChangeOpen} />)}
+      
     </>
   );
 }
