@@ -170,14 +170,6 @@
       width: 2px;
       height: 76px;
       background-color: #E2E6E9;
-
-      @include onPhone {
-        display: none;
-      }
-
-      @include onMokup {
-        display: none;
-      }
     }
 
     &::before {
