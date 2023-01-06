@@ -2,6 +2,7 @@
 @import 'swiper/css/navigation';
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Lato:wght@700&display=swap');
 @import 'swiper/css/pagination';
+@import '../../Cart/mixin.scss';
 
 .slider {
   &-item {
@@ -12,6 +13,11 @@
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     object-position: bottom center;
+
+    @include onPhone {
+      min-width: 100%;
+      margin-left: -45%;
+    }
   }
 
   &__buy {
@@ -22,6 +28,10 @@
     right: 45%;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
+
+    @include onPhone {
+      display: none;
+    }
   }
 
   &-buy-box {
@@ -33,13 +43,15 @@
     height: 80%;
     background-color: rgb(29, 27, 27);
     padding: 50px 60px 0px;
+
+
   }
 }
 
 .swiper {
   position: relative;
 
-  &list {
+  &-list {
     text-align: left;
   }
 
@@ -51,6 +63,9 @@
     align-items: center;
     border: 1px solid #B4BDC3;
     border-radius: 10px;
+    @include onPhone {
+      display: none;
+    }
   
     &::after {
       display: none;
@@ -73,6 +88,9 @@
     align-items: center;
     border: 1px solid #B4BDC3;
     border-radius: 10px;
+    @include onPhone {
+      display: none;
+    }
   
     &::after {
       display: none;
@@ -91,6 +109,10 @@
 
 .flex {
   display: flex;
+
+  @include onPhone {
+   display: block;
+  }
 }
 
 .box {
@@ -99,13 +121,27 @@
     font-weight: 800;
     letter-spacing: 2px;
     color: #fff;
-    font-size: 45px;
+    font-size: 50px;
     line-height: 120%;
+
+    @include onMokup {
+      font-size: 30px;
+      letter-spacing: 1px;
+    }
+
+    @include onPhone {
+      font-size: 20px;
+    }
   }
 
   &-subtitle {
     margin-top: -150px;
     color: #B4BDC3;
+
+    @include onMokup {
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
   }
 
   &-btn {
@@ -116,6 +152,16 @@
     padding: 20px 35px;
     border: 1px solid #B4BDC3;
     border-radius: 30px;
+
+    @include onMokup {
+      margin: 260px 0px 0px 0px;
+      padding: 15px;
+      font-size: 14px;
+    }
+
+    @include onPhone {
+      font-size: 14px;
+    }
   }
 }
 .hand {

@@ -21,8 +21,7 @@
   bottom: 0px;
   height: 30px;
   width: 100%;
-  position: absolute; ///dont forget to change it later
-  bottom: 0;
+  margin-top: 20px;//implement
 
   @include onPhone {
     height: 320px;
