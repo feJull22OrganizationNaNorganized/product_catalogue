@@ -59,10 +59,10 @@
   gap: 64px;
   margin-left: 48px;
 
-  //@include onPhone {
-  //  display: none;
+  @include onPhone {
+    gap: 0px;
   
-  //}
+  }
 
   @include onMokup {
     margin-left: 32px;
