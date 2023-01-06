@@ -28,7 +28,6 @@
     margin-left: 16px;
     align-items: center;
     padding: 0;
-    //border-bottom: transparent;
   }
 
   @include onMokup {
@@ -82,7 +81,6 @@
 .hand {
   position: absolute;
   left: 50.2%;
-  // right: 36.15%;
   top: 0%;
   bottom: 47.91%;
   width: 12px;
@@ -100,7 +98,6 @@
   @include onPhone {
     margin-top: 5px;
     margin-right: 20px;
-    //width: 10px;
   }
 }
 

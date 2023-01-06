@@ -1,0 +1,125 @@
+@import '../../Footer/mixin.scss';
+@import 'swiper/css/navigation';
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Lato:wght@700&display=swap');
+@import 'swiper/css/pagination';
+
+.slider {
+  &-item {
+    width: 50%;
+    height: 410px;
+    position: relative;
+    left: 45%;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    object-position: bottom center;
+  }
+
+  &__buy {
+    width: 41%;
+    background-color: #000;
+    min-height: 400px;
+    position: relative;
+    right: 45%;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+
+  &-buy-box {
+    position: relative;
+    border-radius: 30px;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    height: 80%;
+    background-color: rgb(29, 27, 27);
+    padding: 50px 60px 0px;
+  }
+}
+
+.swiper {
+  position: relative;
+
+  &list {
+    text-align: left;
+  }
+
+  &-button-next {
+    height: 400px;
+    top: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #B4BDC3;
+    border-radius: 10px;
+  
+    &::after {
+      display: none;
+    }
+  
+    &::before {
+      content: '';
+      position: absolute;
+      width: 6px;
+      height: 10px;
+      background: url(../../../images/next.svg) no-repeat;
+    }
+  }
+
+  &-button-prev {
+    height: 400px;
+    top: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #B4BDC3;
+    border-radius: 10px;
+  
+    &::after {
+      display: none;
+    }
+  
+    &::before {
+      content: '';
+      position: absolute;
+      width: 6px;
+      height: 10px;
+      background: url(../../../images/back-arro.svg) no-repeat;
+  
+    }
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.box {
+  &-title {
+    font-family: Lato;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #fff;
+    font-size: 45px;
+    line-height: 120%;
+  }
+
+  &-subtitle {
+    margin-top: -150px;
+    color: #B4BDC3;
+  }
+
+  &-btn {
+    color: #f3f3f3;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 280px 0px 0px 0px;
+    padding: 20px 35px;
+    border: 1px solid #B4BDC3;
+    border-radius: 30px;
+  }
+}
+.hand {
+  width: 40px;
+  height: 40px;
+  background: url(../../../images/hand_3.png);
+}

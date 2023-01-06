@@ -1,5 +1,4 @@
 import React from 'react';
-// import './Header.scss';
 import s from './Header.module.scss';
 import { Link } from 'react-router-dom';
 import { PageNavLink } from '../PageNavLink/PageNavLink';

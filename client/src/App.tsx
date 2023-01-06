@@ -73,7 +73,6 @@ export const App: React.FC = () => {
             setOrderCart={setOrderCart}
           />
         ) : (<Loader />)} />
-
         <Route path="/menu" element={< NotFound />} />
         <Route path="/favorites" element={<NotFound />} />
         <Route path="/cart" element={<Cart 
