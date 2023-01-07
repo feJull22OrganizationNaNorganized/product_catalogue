@@ -11,6 +11,7 @@ import { Iphones } from './types/Iphones';
 import { getAllProducts } from './api/iphones';
 import { Header } from './components/Header/Header';
 import { Cart } from './components/Cart/Cart';
+import './styles/index.scss';
 
 import './Utilities/normalize.css';
 import './Utilities/reset.css';
@@ -57,33 +58,43 @@ export const App: React.FC = () => {
 
   return (
     <>
-      {products.length && (<Header />)}
-      <Routes>
-        <Route index element={<Home />} />
-        <Route path="product_catalogue" element={products.length ? (
-          <PhonesCatalog
-            setPhonesPerPage={setPhonesPerPage}
-            currentIphones={currentIphones}
-            phonesPerPage={phonesPerPage}
-            handlePaginate={handlePaginate}
-            products={products}
-            nextPage={nextPage}
-            beforePage={beforePage}
-            currentPage={currentPage}
-            setOrderCart={setOrderCart}
-          />
-        ) : (<Loader />)} />
-        <Route path="/menu" element={< NotFound />} />
-        <Route path="/favorites" element={<NotFound />} />
-        <Route path="/cart" element={<Cart 
-          orderCart={orderCart} 
-          setOrderCart={setOrderCart}
-        />} />
-        <Route index element={<Tablets />} />
-        <Route path='*' element={<NotFound />} />
-        <Route index element={<Tablets />} />
-      </Routes>
-      {products.length && (<Footer />)}
+      <div className="wrapper">
+        <header className="header">
+          {products.length > 0 && (<Header />)}
+        </header>
+        <main className="main">
+          <Routes>
+            <Route index element={<Home />} />
+            <Route path="product_catalogue" element={products.length ? (
+              <PhonesCatalog
+                setPhonesPerPage={setPhonesPerPage}
+                currentIphones={currentIphones}
+                phonesPerPage={phonesPerPage}
+                handlePaginate={handlePaginate}
+                products={products}
+                nextPage={nextPage}
+                beforePage={beforePage}
+                currentPage={currentPage}
+                setOrderCart={setOrderCart}
+              />
+            ) : (<Loader />)} />
+            <Route path="/menu" element={< NotFound />} />
+            <Route path="/favorites" element={<NotFound />} />
+            <Route path="/cart" element={<Cart
+              orderCart={orderCart}
+              setOrderCart={setOrderCart}
+            />} />
+            <Route index element={<Tablets />} />
+            <Route path='*' element={<NotFound />} />
+            <Route index element={<Tablets />} />
+          </Routes>
+        </main>
+        <footer className="footer">
+          {products.length && (<Footer />)}
+        </footer>
+
+      </div>
+
     </>
   );
 };

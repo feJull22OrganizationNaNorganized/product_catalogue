@@ -28,6 +28,8 @@
     "node": "14.16.1"
   },
   "dependencies": {
+    "body-scroll-lock": "^4.0.0-beta.0",
+    "react-remove-scroll-bar": "^2.3.4",
     "swiper": "^8.4.4"
   }
 }

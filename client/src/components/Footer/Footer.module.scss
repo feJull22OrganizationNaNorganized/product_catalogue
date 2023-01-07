@@ -12,7 +12,7 @@
 .footer {
   border-top: 2px solid #E2E6E9;
   padding-top: 20px;
-  // height: var(--footer-height);
+   height: var(--footer-height);
   height: 100px;
   width: 100%;
   position: relative;
@@ -21,11 +21,11 @@
   bottom: 0px;
   height: 30px;
   width: 100%;
-  margin-top: 20px;//implement
+  margin-top: 20px;
 
   @include onPhone {
-    height: 320px;
-    padding-bottom: 40px;
+    height: 280px;
+    padding-bottom: 0px;
   }
 
   &__container {
