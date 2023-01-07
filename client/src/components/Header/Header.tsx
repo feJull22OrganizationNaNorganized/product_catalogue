@@ -3,6 +3,7 @@ import s from './Header.module.scss';
 import { Link } from 'react-router-dom';
 import { PageNavLink } from '../PageNavLink/PageNavLink';
 import { BurgerMenu } from '../BurgerMenu/BurgerMenu';
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -11,6 +12,7 @@ export function Header() {
     setOpen(prev => !prev);
     console.log(open);
   };
+
   return (
     <>
       <div className={s.header} id="header">
@@ -102,8 +104,7 @@ export function Header() {
         />
       </div>
 
-      {open && (<BurgerMenu handleChangeOpen={handleChangeOpen} />)}
-      
+      {open && (<BurgerMenu handleChangeOpen={handleChangeOpen} open={open}/>)}
     </>
   );
 }

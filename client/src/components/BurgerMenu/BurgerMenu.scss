@@ -1,3 +1,5 @@
+
+
 .hi {
   min-height: 100%;
   background-color: #f3f3f3;
@@ -7,17 +9,17 @@
   bottom: 0;
   left: 0;
   right: 0;
-  overflow: hidden;
+  overflow: auto;
   display: flex;
   flex-direction: column;
+  background-color: #D8D8D8;
 }
 
 .for-burger {
   display: flex;
   justify-content: space-between;
-  margin: 32px;
+  padding: 32px;
   border-bottom: 1px solid #E2E6E9;
-  padding-bottom: 20px;
 }
 
 
@@ -42,4 +44,9 @@
   display: flex;
   justify-content: space-between;
   padding: 20px;
+}
+
+.x {
+  width: 20px;
+  height: 20px;
 }

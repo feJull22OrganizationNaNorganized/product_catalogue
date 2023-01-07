@@ -18,9 +18,9 @@
 
 .header {
   @include onMokup() {
-    //display: none;
+    display: none;
   }
-  padding: 15px;
+  //padding: 15px;
   background-color: #fff;
   border-bottom: 2px solid #E2E6E9;
 
@@ -28,16 +28,18 @@
     align-items: flex-start;
     justify-content: space-between;
     margin-top: 14px;
-    margin-left: 16px;
+    padding: 0px 16px;
     align-items: center;
     padding: 0;
   }
 
   @include onMokup {
-    padding-right: 22px;
+    padding-right: 0px;
   }
 
   &__container {
+    width: 100%;
+    padding: 10px 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -102,7 +104,7 @@
 
   @include onPhone {
     margin-top: 5px;
-    margin-right: 20px;
+    margin-right: 0px;
   }
 }
 
@@ -170,7 +172,7 @@
   }
 
   @include onMokup {
-    display: inline;
+    display: none;
   }
 }
 
@@ -185,6 +187,14 @@
       width: 2px;
       height: 76px;
       background-color: #E2E6E9;
+      
+      @include onMokup {
+        display: none;
+      }
+
+      @include onPhone {
+        display: none;
+      }
     }
 
     &::before {
@@ -212,7 +222,8 @@
   right: 0;
   text-align: right;
   background-color: #fff;
-  padding-right: 10px;
+  padding-right: 16px;
+  padding-top: 10px;
 
   @include onMokup {
     display: none;
