@@ -3,7 +3,7 @@ import s from './Header.module.scss';
 import { Link } from 'react-router-dom';
 import { PageNavLink } from '../PageNavLink/PageNavLink';
 import { BurgerMenu } from '../BurgerMenu/BurgerMenu';
-import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
+import { RemoveScroll } from 'react-remove-scroll';
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -95,16 +95,15 @@ export function Header() {
           </div>
         </div>
       </div>
-      <div className={s.burger}> 
-        <img 
-          src={require('../../images/cart.png')} 
-          alt="burger" 
+      <div className={s.burger}>
+        <img
+          src={require('../../images/cart.png')}
+          alt="burger"
           className={s.burger}
           onClick={() => handleChangeOpen()}
         />
       </div>
-
-      {open && (<BurgerMenu handleChangeOpen={handleChangeOpen} open={open}/>)}
+      {open && (<BurgerMenu handleChangeOpen={handleChangeOpen} open={open} />)}
     </>
   );
 }
