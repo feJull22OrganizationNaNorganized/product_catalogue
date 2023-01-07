@@ -33,6 +33,7 @@ ul {
 
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
   @include onPhone {
     min-width: 100%;
     padding: 0px 10px;
