@@ -46,8 +46,9 @@ export const BurgerMenu: React.FC<Props> = ({ handleChangeOpen, open}) => {
 
         <div className=' bottom-burger'>
           <img className='bootem-item' src={require('../../images/heart.png')} alt="heart" />
-          <img src={require('../../images/bucket.png')} alt="backet" />
-
+          <Link to='/cart' onClick={() => handleChangeOpen()}>
+            <img src={require('../../images/bucket.png')} alt="backet" />
+          </Link>
         </div>
       </div></>
   );

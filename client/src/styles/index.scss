@@ -30,9 +30,12 @@ ul {
 }
 
 .container {
+
+  max-width: 1200px;
+  margin: 0 auto;
   @include onPhone {
     min-width: 100%;
-    padding: 0;
+    padding: 0px 10px;
     margin: 0;
   }
 }

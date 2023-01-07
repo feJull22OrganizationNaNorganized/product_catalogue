@@ -17,9 +17,9 @@
 }
 
 .header {
-  @include onMokup() {
-    display: none;
-  }
+  //@include onMokup() {
+  //  display: none;
+  //}
   //padding: 15px;
   background-color: #fff;
   border-bottom: 2px solid #E2E6E9;

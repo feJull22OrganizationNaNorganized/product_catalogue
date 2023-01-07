@@ -12,5 +12,8 @@
   margin-bottom: 56px;
   line-height: 56px;
   font-family: Mont;
+  @include onPhone {
+    font-size: 32px;
+  }
 }
 
