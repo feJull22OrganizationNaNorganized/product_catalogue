@@ -15,7 +15,7 @@
     object-position: bottom center;
 
     @include onPhone {
-      min-width: 102%;
+      width: 100%;
       margin-left: -45%;
       border-radius: 0;
       margin-right: 10px;
