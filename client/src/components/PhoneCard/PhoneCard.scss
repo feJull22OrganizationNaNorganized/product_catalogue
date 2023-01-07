@@ -7,6 +7,10 @@
   background-color: #fff;
   transition: all 0.5s;
 
+  @include onPhone {
+    width: 96%;
+  }
+
   &:hover {
     transform: scale(1.05);
     box-shadow: 0px 0px 0px 1px #89939A;
@@ -160,4 +164,10 @@
   // border: 1 px solid #E2E6E9;
   outline: 0;
   border: 1px solid #E2E6E9;
+}
+
+.container {
+  @include onPhone {
+    padding: 0 10px;
+  }
 }

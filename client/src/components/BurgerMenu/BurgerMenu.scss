@@ -1,4 +1,5 @@
 .hi {
+  min-height: 100%;
   background-color: #f3f3f3;
   position: fixed;
   z-index: 2;
@@ -7,8 +8,38 @@
   left: 0;
   right: 0;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .for-burger {
-  text-align: right;
+  display: flex;
+  justify-content: space-between;
+  margin: 32px;
+  border-bottom: 1px solid #E2E6E9;
+  padding-bottom: 20px;
+}
+
+
+.burger-list {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 auto;
+}
+
+.burger_item {
+  display: block;
+  margin-bottom: 32px;
+  color: #89939A;
+  text-transform: uppercase;
+}
+
+.bottom-burger {
+  border-top: 1px solid #E2E6E9;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
 }

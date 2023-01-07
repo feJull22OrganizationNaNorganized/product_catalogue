@@ -14,6 +14,7 @@ ul {
   background: #E2E6E9;
   padding-top: 56px;
   background-color: #FAFBFC;
+  width: 100%;
 
   &__title {
     padding-bottom: 8px;
@@ -81,5 +82,12 @@ ul {
     font-weight: 700;
     line-height: 21px;
     color: #000;
+  }
+}
+
+.container {
+  @include onTablet {
+    min-width: 100%;
+    padding: 0;
   }
 }

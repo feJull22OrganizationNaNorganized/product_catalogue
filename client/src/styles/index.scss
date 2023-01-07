@@ -1,3 +1,5 @@
+@import '../components/Cart/mixin.scss';
+
 @font-face {
   font-family: Mont;
   src: url(../fonts/Mont-Regular.otf);
@@ -19,6 +21,7 @@ body {
   margin: 0;
   padding: 0;
   font-family:'Mont', sans-serif;
+  overflow: hidden;
 }
 
 ul {

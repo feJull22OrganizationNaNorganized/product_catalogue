@@ -212,6 +212,7 @@
   right: 0;
   text-align: right;
   background-color: #fff;
+  padding-right: 10px;
 
   @include onMokup {
     display: none;
